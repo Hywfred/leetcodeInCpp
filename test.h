@@ -7,8 +7,10 @@
 
 #include <ostream>
 #include <initializer_list>
+#include <vector>
 
-using std::cout;
+using namespace std;
+
 
 /**
  * explicit for ctor with more than one param
