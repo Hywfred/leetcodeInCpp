@@ -11,7 +11,20 @@
 
 using namespace std;
 
+/*
+ * imperfect forwarding
+ */
 
+void process(int& a){
+    cout << "process(int& a)" << endl;
+}
+void process(int&& a) {
+    cout << "process(int&& a)" << endl;
+}
+void forward(int&& a) {
+    cout << "forward(int&& a)" << endl;
+    process(a);
+}
 /**
  * explicit for ctor with more than one param
  */
