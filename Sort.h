@@ -199,6 +199,44 @@ public:
         mergeSort(input, 0, length - 1, tmp);
     }
 
+    //********** 快速排序 **********//
+    void swap(int& a, int& b) {
+        int tmp = a;
+        a = b;
+        b = tmp;
+    }
+    void quickSort(vector<int>& input, int left, int right) {
+        if (left >= right) {
+            return;
+        }
+        int target = input[left];
+        int l = left ;
+        int r = right;
+        while (l < r) {
+            while (l < r && input[r] >= target) {
+                r--;
+            }
+            while (l < r && input[l] <= target) {
+                l++;
+            }
+            if (l < r) {
+                swap(input[l], input[r]);
+            }
+        }
+        if (l != left) {
+            swap(input[l], input[left]);
+        }
+        quickSort(input, left, l-1);
+        quickSort(input, l+1, right);
+    }
+    /**
+     * 快速排序
+     * 分治 递归
+     * @param input
+     */
+    void Quick(vector<int>& input) {
+        quickSort(input, 0, input.size() - 1);
+    }
 
 };
 

@@ -12,9 +12,10 @@ int main() {
     Sort sort;
 //    sort.Insert(input);
 //    sort.Shell(input);
-//    input = {9, 8, 7, 6, 5, 4, 3, 2, 1};
+    input = {9, 8, 7, 6, 5, 4, 3, 2, 1};
 //    sort.Heap(input);
-    sort.Merge(input);
+//    sort.Merge(input);
+    sort.Quick(input);
     for (int elem : input) {
         cout << elem << " ";
     }
