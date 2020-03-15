@@ -20,11 +20,11 @@ public:
     void Bubble(vector<int> &input) {
         int length = input.size();
         for (int i = 0; i < length - 1; ++i) {
-            for (int j = i + 1; j < length; ++j) {
-                if (input[i] > input[j]) {
-                    int tmp = input[i];
-                    input[i] = input[j];
-                    input[j] = tmp;
+            for (int j = 0; j < length - 1 - i; ++j) {
+                if (input[j] > input[j + 1]) {
+                    int tmp = input[j];
+                    input[j] = input[j+1];
+                    input[j+1] = tmp;
                 }
             }
         }
