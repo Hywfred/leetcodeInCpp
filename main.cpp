@@ -1,17 +1,14 @@
 #include <iostream>
 #include <string>
-#include "daily/GreatestCommonDivisor.h"
+#include <algorithm>
 #include "test.h"
-
+#include "daily/CompressString.h"
 using namespace std;
 
+
 int main() {
-    int a = 0;
-//    process(a);
-//    process(1);
-//    process(std::move(a));
-    forward(1);
-//    forward(a);
-    forward(move(a));
+    cout << dec << int('A') <<  " " << int('a');
+    Solution s;
+    cout << s.compressString("aabbccddd");
     return 0;
 }

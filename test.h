@@ -11,6 +11,12 @@
 
 using namespace std;
 
+template <class T>
+void f(){ T d; }
+
+template <>
+void f<int>(){ int d; }
+
 /*
  * imperfect forwarding
  */
