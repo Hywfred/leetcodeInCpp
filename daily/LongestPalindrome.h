@@ -16,6 +16,7 @@
 #define LEETCODEINCPP_LONGESTPALINDROME_H
 
 #include <string>
+#include <map>
 using  namespace std;
 class Solution {
 public:
@@ -46,6 +47,33 @@ public:
             }
         }
         return  ans;
+    }
+    int longestPalindrome2(string s) {
+        int ans = 0;
+        int len = s.size();
+        if (len < 2) {
+            return len;
+        }
+        map<char, int> dict;
+        for (int i = 0; i < len; ++i) {
+            auto it = dict.find(s[i]);
+            if (it != dict.end()) {
+                dict[s[i]]++;
+            } else {
+                dict[s[i]] = 1;
+            }
+        }
+        int flag = 0;
+        for (auto elem : dict) {
+            if (elem.second % 2 == 0) {
+                ans += elem.second;
+            }
+            if (elem.second % 2 == 1) {
+                flag = 1;
+                ans += elem.second - 1;
+            }
+        }
+        return  ans+flag;
     }
 };
 #endif //LEETCODEINCPP_LONGESTPALINDROME_H
