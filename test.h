@@ -8,8 +8,33 @@
 #include <ostream>
 #include <initializer_list>
 #include <vector>
-
+extern const int b;
+namespace test {
+    const int a = 10;
+    void testA(){
+        cout << a << endl;
+    }
+    void testB(){
+        cout << b << endl;
+    }
+}
 using namespace std;
+
+
+class CTest {
+public:
+    void SetValue();
+
+public:
+    int m_iValue1;
+    int m_iValue2;
+    int data;
+};
+
+void CTest::SetValue() {
+    m_iValue1 = 13;
+    m_iValue2 = 13;
+}
 
 template <class T>
 void f(){ T d; }
