@@ -6,7 +6,8 @@
 #define LEETCODEINCPP_SORT_H
 
 #include <vector>
-
+#include <ctime>
+#include <cassert>
 using namespace std;
 
 class Sort {
@@ -205,6 +206,7 @@ public:
         a = b;
         b = tmp;
     }
+    // 快排一
     void quickSort(vector<int>& input, int left, int right) {
         if (left >= right) {
             return;
@@ -229,6 +231,27 @@ public:
         quickSort(input, left, l-1);
         quickSort(input, l+1, right);
     }
+    // 快排二
+    void partion(vector<int>& input, int s, int e) {
+        if (s >= e) {
+            return;
+        }
+        int target = input[s];
+        int l = s, r = e + 1;
+        while (true) {
+            while (++l <= e && input[l] > target);
+            while (--r >= 0 && input[r] < target);
+            if (l >= r) {
+                break;
+            }
+            swap(input[l], input[r]);
+        }
+        input[s] = input[l];
+        input[l] = target;
+        partion(input, s, l-1);
+        partion(input, l+1, e);
+    }
+    
     /**
      * 快速排序
      * 分治 递归
@@ -237,6 +260,35 @@ public:
     void Quick(vector<int>& input) {
         quickSort(input, 0, input.size() - 1);
     }
+    void Quick2(vector<int>& input) {
+        partion(input, 0, input.size() - 1);
+    }
+
+};
+namespace SortTestHelper {
+
+    // 生成有n个元素的随机数组,每个元素的随机范围为[rangeL, rangeR]
+    vector<int> generateRandomArray(int n, int rangeL, int rangeR) {
+
+        assert(rangeL <= rangeR);
+
+        vector<int> arr(n);
+
+        // 设置随机种子
+        srand(time(NULL));
+        for (int i = 0; i < n; i++)
+            arr[i] = rand() % (rangeR - rangeL + 1) + rangeL;
+        return arr;
+    }
+
+    // 打印arr数组的所有内容
+    template<typename T>
+    void printArray(T arr[], int n) {
+
+        for (int i = 0; i < n; i++)
+            cout << arr[i] << " ";
+        cout << endl;
+   }
 
 };
 
