@@ -1,17 +1,12 @@
+#include "daily/MinimumIncrementToMakeArrayUnique.h"
 #include <iostream>
-#include <string>
-#include "daily/GreatestCommonDivisor.h"
-#include "test.h"
-
 using namespace std;
 
 int main() {
-    int a = 0;
-//    process(a);
-//    process(1);
-//    process(std::move(a));
-    forward(1);
-//    forward(a);
-    forward(move(a));
+    Solution s;
+    vector<int> input{1, 2, 2};
+    input = {3,2,1,2,1,7};
+    int ans = s.minIncrementForUnique(input);
+    cout << ans << endl;
     return 0;
 }
