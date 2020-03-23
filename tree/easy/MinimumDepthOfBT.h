@@ -17,7 +17,7 @@
 #define LEETCODEINCPP_MINIMUMDEPTHOFBT_H
 
 #include <algorithm>
-#include "../../util/treenode.h"
+#include "../../util/TreeNode.h"
 using namespace std;
 
 class Solution {

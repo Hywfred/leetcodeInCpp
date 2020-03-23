@@ -22,7 +22,7 @@
 #ifndef LEETCODEINCPP_GENERATEBST_H
 #define LEETCODEINCPP_GENERATEBST_H
 
-#include "../../util/treenode.h"
+#include "../../util/TreeNode.h"
 
 class Solution {
 public:

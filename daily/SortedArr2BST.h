@@ -16,7 +16,7 @@
 #ifndef LEETCODEINCPP_SORTEDARR2BST_H
 #define LEETCODEINCPP_SORTEDARR2BST_H
 
-#include "../util/treenode.h"
+#include "../util/TreeNode.h"
 #include <vector>
 
 using std::vector;

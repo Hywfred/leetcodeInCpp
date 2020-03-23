@@ -16,7 +16,7 @@
 #ifndef LEETCODEINCPP_PATHSUM_H
 #define LEETCODEINCPP_PATHSUM_H
 
-#include "../../util/treenode.h"
+#include "../../util/TreeNode.h"
 
 class Solution {
 public:

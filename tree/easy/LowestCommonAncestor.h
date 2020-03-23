@@ -18,7 +18,7 @@
 #ifndef LEETCODEINCPP_LOWESTCOMMONANCESTOR_H
 #define LEETCODEINCPP_LOWESTCOMMONANCESTOR_H
 
-#include "../../util/treenode.h"
+#include "../../util/TreeNode.h"
 #include <algorithm>
 using namespace std;
 class Solution {

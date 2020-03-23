@@ -18,7 +18,7 @@
 #ifndef LEETCODEINCPP_INVERTTREE_H
 #define LEETCODEINCPP_INVERTTREE_H
 
-#include "../../util/treenode.h"
+#include "../../util/TreeNode.h"
 class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) {

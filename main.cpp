@@ -1,19 +1,16 @@
-#include "daily/WaterAndJug.h"
 #include <iostream>
-#include "Sort.h"
+#include "util/ListNode.h"
+#include "daily/MiddleOfTheLinkedList.h"
 
-using  namespace std;
+using namespace std;
 
 int main() {
-    vector<int> input = SortTestHelper::generateRandomArray(20, -100, 100);
-    for (int elem : input) {
-        cout << elem << " ";
-    }
-    cout << endl;
-    Sort s;
-    s.Quick2(input);
-    for (int elem : input) {
-        cout << elem << " ";
-    }
+    vector<int> input{1, 2, 3, 4, 5};
+    input = {1, 2, 3, 4, 5, 6};
+    auto head = NewList(input);
+    Print(head);
+    Solution s;
+    auto ans = s.middleNode(head);
+    Print(ans);
     return 0;
 }

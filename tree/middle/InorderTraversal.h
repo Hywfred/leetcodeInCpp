@@ -5,7 +5,7 @@
 #ifndef LEETCODEINCPP_INORDERTRAVERSAL_H
 #define LEETCODEINCPP_INORDERTRAVERSAL_H
 
-#include "../../util/treenode.h"
+#include "../../util/TreeNode.h"
 #include <stack>
 #include <tuple>
 
