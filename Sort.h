@@ -8,6 +8,8 @@
 #include <vector>
 #include <ctime>
 #include <cassert>
+#include <iostream>
+
 using namespace std;
 
 class Sort {
@@ -24,8 +26,8 @@ public:
             for (int j = 0; j < length - 1 - i; ++j) {
                 if (input[j] > input[j + 1]) {
                     int tmp = input[j];
-                    input[j] = input[j+1];
-                    input[j+1] = tmp;
+                    input[j] = input[j + 1];
+                    input[j + 1] = tmp;
                 }
             }
         }
@@ -37,7 +39,7 @@ public:
      * 与冒泡排序相比，少了很多交换次数，效率要好一些。
      * @param input
      */
-    void Select(vector<int>& input) {
+    void Select(vector<int> &input) {
         int length = input.size();
         for (int i = 0; i < length - 1; ++i) {
             int min = i;
@@ -58,7 +60,7 @@ public:
      * 从第2个元素开始，每次假设前面的序列已经排好序，找到第i个元素的位置插入，其他的后移一位即可。
      * @param input
      */
-    void Insert(vector<int>& input) {
+    void Insert(vector<int> &input) {
         if (input.size() <= 1) {
             return;
         }
@@ -66,7 +68,7 @@ public:
             int tmp = input[i];
             int j = i - 1;
             while (j >= 0 && tmp < input[j]) {
-                input[j+1] = input[j];
+                input[j + 1] = input[j];
                 --j;
             }
             if (j + 1 != i) {
@@ -80,12 +82,12 @@ public:
      * 按增量进行插入排序，直至增量减小为1.
      * @param input
      */
-    void Shell(vector<int>& input) {
+    void Shell(vector<int> &input) {
         int length = input.size();
         for (int gap = length / 2; gap > 0; gap /= 2) {
             for (int i = gap; i < length; ++i) {
                 int cur = input[i];
-                int j = i- gap;
+                int j = i - gap;
                 while (j >= 0 && cur < input[j]) {
                     input[j + gap] = input[j];
                     j -= gap;
@@ -104,7 +106,7 @@ public:
      * @param curIndex
      * @param end
      */
-    void SiftDown(vector<int>& arr, int curIndex, int end) {
+    void SiftDown(vector<int> &arr, int curIndex, int end) {
         int left = curIndex * 2 + 1; // 左孩子
         while (left <= end) { // 左孩子存在
             int swap = curIndex; // 需要交换的元素下标
@@ -112,7 +114,7 @@ public:
                 swap = left;
             }
             // 如果有右孩子并且右孩子值大于当前最大值
-            if (left + 1 <= end && arr[left+1] > arr[swap]) {
+            if (left + 1 <= end && arr[left + 1] > arr[swap]) {
                 swap = left + 1;
             }
             // 需要交换
@@ -127,13 +129,14 @@ public:
             }
         }
     }
+
     /**
      * 堆排序
      * 利用堆结构进行排序，每次选择大顶堆的堆定与最后的元素交换
      * 接着调整大顶堆，继续上一步操作
      * @param input 
      */
-    void Heap(vector<int>& input) {
+    void Heap(vector<int> &input) {
         int length = input.size();
         // 构建大顶堆
         for (int last = length / 2 - 1; last >= 0; --last) {
@@ -152,8 +155,9 @@ public:
             SiftDown(input, 0, end);
         }
     }
+
     //***************归并排序****************//
-    void merge(vector<int>& input, int left, int middle, int right, vector<int>& tmp) {
+    void merge(vector<int> &input, int left, int middle, int right, vector<int> &tmp) {
         int l = left;
         int r = middle + 1;
         int k = 0;
@@ -175,44 +179,47 @@ public:
             input[left++] = tmp[k++];
         }
     }
+
     /**
      * 归并排序 递归调用
      * @param input 输入数组
      * @param left 左边界
      * @param right 右边界
      */
-    void mergeSort(vector<int>& input, int left, int right, vector<int>& tmp) {
+    void mergeSort(vector<int> &input, int left, int right, vector<int> &tmp) {
         if (left < right) {
             int middle = left + (right - left) / 2;
             mergeSort(input, left, middle, tmp);
-            mergeSort(input, middle+1, right, tmp);
+            mergeSort(input, middle + 1, right, tmp);
             merge(input, left, middle, right, tmp);
         }
     }
+
     /**
      * 归并排序
      * 分治策略 分而治之，跟二叉树有某种关联 但是没想明白
      * @param input
      */
-    void Merge(vector<int>& input) {
+    void Merge(vector<int> &input) {
         int length = input.size();
-        vector<int> tmp (length);
+        vector<int> tmp(length);
         mergeSort(input, 0, length - 1, tmp);
     }
 
     //********** 快速排序 **********//
-    void swap(int& a, int& b) {
+    void swap(int &a, int &b) {
         int tmp = a;
         a = b;
         b = tmp;
     }
+
     // 快排一
-    void quickSort(vector<int>& input, int left, int right) {
+    void quickSort(vector<int> &input, int left, int right) {
         if (left >= right) {
             return;
         }
         int target = input[left];
-        int l = left ;
+        int l = left;
         int r = right;
         while (l < r) {
             while (l < r && input[r] >= target) {
@@ -228,40 +235,72 @@ public:
         if (l != left) {
             swap(input[l], input[left]);
         }
-        quickSort(input, left, l-1);
-        quickSort(input, l+1, right);
+        quickSort(input, left, l - 1);
+        quickSort(input, l + 1, right);
     }
     // 快排二
-    void partion(vector<int>& input, int s, int e) {
-        if (s >= e) {
-            return;
+    /**
+     * 处理枢纽值，最左侧一个值，最右侧一个值，求其中间索引的值
+     * 将 3 个值排序，排序后的中间值与最右侧值的左侧一个值交换位置
+     * 最右侧值左侧一个值作为排序的参考值。
+     * @param input 待排序数组
+     * @param left 待排序的数组索引左侧开始位置
+     * @param right 待排序的数组索引右侧结束位置
+     */
+    void dealPivot(vector<int> &input, int left, int right) {
+        int middle = left + (right - left) / 2;
+        if (input[left] > input[middle]) {
+            swap(input[left], input[middle]);
         }
-        int target = input[s];
-        int l = s, r = e + 1;
-        while (true) {
-            while (++l <= e && input[l] > target);
-            while (--r >= 0 && input[r] < target);
-            if (l >= r) {
-                break;
-            }
-            swap(input[l], input[r]);
+        if (input[left] > input[right]) {
+            swap(input[left], input[right]);
         }
-        input[s] = input[l];
-        input[l] = target;
-        partion(input, s, l-1);
-        partion(input, l+1, e);
+        if (input[middle] > input[right]) {
+            swap(input[middle], input[right]);
+        }
+        if (right - 1 > middle) {
+            swap(input[middle], input[right - 1]);
+        }
     }
-    
+
+    void quickSort2(vector<int> &input, int left, int right) {
+        // 退出条件
+        if (left < right) {
+            // 处理枢纽值
+            dealPivot(input, left, right);
+            // 设置指针
+            int l = left, r = right - 1, pivot = right - 1;
+            // 排序，因为枢纽值在右边，所以先从左边开始查找
+            while (true) {
+                while (input[++l] < input[pivot]);
+                while (r > l && input[--r] > input[pivot]);
+                if (l < r) {
+                    swap(input[l], input[r]);
+                } else {
+                    break;
+                }
+            }
+            // 交换枢纽值
+            if (l < pivot) {
+                swap(input[l], input[pivot]);
+            }
+            // 递归处理
+            quickSort2(input, left, l - 1);
+            quickSort2(input, l + 1, right);
+        }
+    }
+
     /**
      * 快速排序
      * 分治 递归
      * @param input
      */
-    void Quick(vector<int>& input) {
+    void Quick(vector<int> &input) {
         quickSort(input, 0, input.size() - 1);
     }
-    void Quick2(vector<int>& input) {
-        partion(input, 0, input.size() - 1);
+
+    void Quick2(vector<int> &input) {
+        quickSort2(input, 0, input.size() - 1);
     }
 
 };
@@ -288,7 +327,7 @@ namespace SortTestHelper {
         for (int i = 0; i < n; i++)
             cout << arr[i] << " ";
         cout << endl;
-   }
+    }
 
 };
 
