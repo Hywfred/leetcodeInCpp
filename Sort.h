@@ -215,28 +215,25 @@ public:
 
     // 快排一
     void quickSort(vector<int> &input, int left, int right) {
-        if (left >= right) {
-            return;
-        }
-        int target = input[left];
-        int l = left;
-        int r = right;
-        while (l < r) {
-            while (l < r && input[r] >= target) {
-                r--;
+        if (left < right) {
+            int target = input[left];
+            int l = left;
+            int r = right + 1;
+            while (true) {
+                while (input[--r] > target);
+                while (l < r && input[++l] < target);
+                if (l < r) {
+                    swap(input[l], input[r]);
+                } else {
+                    break;
+                }
             }
-            while (l < r && input[l] <= target) {
-                l++;
+            if (l != left) {
+                swap(input[l], input[left]);
             }
-            if (l < r) {
-                swap(input[l], input[r]);
-            }
+            quickSort(input, left, l - 1);
+            quickSort(input, l + 1, right);
         }
-        if (l != left) {
-            swap(input[l], input[left]);
-        }
-        quickSort(input, left, l - 1);
-        quickSort(input, l + 1, right);
     }
     // 快排二
     /**
