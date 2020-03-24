@@ -1,17 +1,16 @@
+#include "daily/TheMassuse.h"
+#include <iostream>
 #include "Sort.h"
 
 using namespace std;
 
 int main() {
-    auto data = SortTestHelper::generateRandomArray(30, -50, 50);
+    auto data = SortTestHelper::generateRandomArray(10, 1, 50);
     for (int elem : data) {
         cout << elem << ", ";
     }
     cout << endl;
-    Sort s;
-    s.quickSort(data, 0, data.size() - 1);
-    for (int elem : data) {
-        cout << elem << ", ";
-    }
+    Solution s;
+    cout << s.massage(data);
     return 0;
 }
