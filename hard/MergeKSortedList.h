@@ -14,13 +14,40 @@
 #define LEETCODEINCPP_MERGEKSORTEDLIST_H
 
 #include <vector>
+#include <climits>
 #include "../util/ListNode.h"
 using namespace std;
 class Solution {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
+        int len = lists.size();
+        if (len < 1)
+            return nullptr;
         ListNode* preHead = new ListNode(0);
-
+        ListNode* tmp = preHead;
+        while (true) {
+            int nullnum = 0;
+            int min = INT_MAX, index = -1;
+            for (int i = 0; i < len; ++i) {
+                if (lists[i] && lists[i]->val < min) {
+                    index = i;
+                    min = lists[i]->val;
+                }
+                // 如果该链表为空，则统计加一。
+                if (!lists[i]) {
+                    ++nullnum;
+                }
+            }
+            // 如果均为空，则退出循环。
+            if (nullnum == len) {
+                break;
+            }
+            // 选出最小值，添加到新链表尾部。
+            tmp->next = lists[index];
+            lists[index] = lists[index]->next;
+            tmp = tmp->next;
+        }
+        return preHead->next;
     }
 };
 #endif //LEETCODEINCPP_MERGEKSORTEDLIST_H
