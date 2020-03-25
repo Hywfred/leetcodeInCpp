@@ -66,40 +66,6 @@ public:
         }
         return ans;
     }
-    /*
-     * // 左右表面积
-        int n = len;
-        while (n) {
-            int maxH = 0;
-            for (int elem : grid[n - 1]) {
-                if (elem > maxH) {
-                    maxH = elem;
-                }
-            }
-            ans += maxH << 1;
-            --n;
-        }
-        // 前后表面积
-        n = len;
-        while (n) {
-            int maxH = 0;
-            for (int i = 0; i < len; ++i) {
-                if (grid[i][n - 1] > maxH) {
-                    maxH = grid[i][n - 1];
-                }
-            }
-            ans += maxH << 1;
-            --n;
-        }
-        // 上下表面积
-        for (int i = 0; i < len; ++i) {
-            for (int j = 0; j < len; ++j) {
-                if (grid[i][j]) {
-                    ans += 2;
-                }
-            }
-        }
-     */
 };
 
 #endif //LEETCODEINCPP_SURFACEAREAOF3DSHAPES_H
