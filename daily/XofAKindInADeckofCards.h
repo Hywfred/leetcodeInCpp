@@ -62,6 +62,9 @@ public:
             return false;
         }
         // 找出最小值的最小因子
+        /*
+         * 这里可以优化，没必要每个数字都遍历，只遍历素数即可。
+         */
         for (int i = 2; i <= min; ++i) {
             int flag = true;
             for (auto item : counter) {
