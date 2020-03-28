@@ -4,18 +4,27 @@
 
 #ifndef LEETCODEINCPP_TEST_H
 #define LEETCODEINCPP_TEST_H
-
 #include <ostream>
 #include <initializer_list>
 #include <vector>
-extern const int b;
+#include <string>
+using namespace std;
+void testIORedirection() {
+    string str;
+    int i;
+    cin >> str >> i;
+    cout << "The string in the file is " << str << "." << endl
+         << "The int in the file is " << i << "." << endl;
+}
+
+//extern const int b;
 namespace test {
     const int a = 10;
     void testA(){
         cout << a << endl;
     }
     void testB(){
-        cout << b << endl;
+//        cout << b << endl;
     }
 }
 using namespace std;
