@@ -1,13 +1,13 @@
 #include <iostream>
 #include <vector>
-#include "daily/ShortEncodingOfWords.h"
+#include "daily/TheLastNumber.h"
 #include "test.h"
 using namespace std;
 
 int main() {
     Solution s;
-    vector<string> input{"time", "me", "bell"};
-//    input = {"me", "time"};
-    cout << s.minimumLengthEncoding(input) << endl;
+    cout << s.lastRemaining(5, 3) << endl;
+    cout << s.lastRemaining(10, 17) << endl;
+    cout << s.lastRemaining(70866, 116922) << endl;
     return 0;
 }
