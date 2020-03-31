@@ -1,13 +1,19 @@
-#include <iostream>
-#include <vector>
-#include "daily/TheLastNumber.h"
-#include "test.h"
+#include "Sort.h"
+#include "daily/SortAnArray.h"
 using namespace std;
 
 int main() {
+    auto input = SortTestHelper::generateRandomArray(10, -50, 50);
+    for (int elem : input) {
+        cout << elem << " ";
+    }
+    cout << endl;
     Solution s;
-    cout << s.lastRemaining(5, 3) << endl;
-    cout << s.lastRemaining(10, 17) << endl;
-    cout << s.lastRemaining(70866, 116922) << endl;
+    input = {1};
+    s.sortArray(input);
+    for (int elem : input) {
+        cout << elem << " ";
+    }
+    cout << endl;
     return 0;
 }
