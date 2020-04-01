@@ -1,17 +1,21 @@
-#include "Sort.h"
-#include "daily/SortAnArray.h"
+#include "daily/MaxNestingDepthOfValidParenthesesStrings.h"
+#include <iostream>
 using namespace std;
 
 int main() {
-    auto input = SortTestHelper::generateRandomArray(10, -50, 50);
-    for (int elem : input) {
+    Solution s;
+    auto ans = s.maxDepthAfterSplit("(()())");
+    for (auto elem : ans) {
         cout << elem << " ";
     }
     cout << endl;
-    Solution s;
-    input = {1};
-    s.sortArray(input);
-    for (int elem : input) {
+    ans = s.maxDepthAfterSplit("()(())()");
+    for (auto elem : ans) {
+        cout << elem << " ";
+    }
+    cout << endl;
+    ans = s.maxDepthAfterSplit("()((()))()");
+    for (auto elem : ans) {
         cout << elem << " ";
     }
     cout << endl;
