@@ -1,22 +1,27 @@
-#include "daily/MaxNestingDepthOfValidParenthesesStrings.h"
+#include "daily/GameOfLife.h"
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main() {
+    vector<vector<int>> input = {{0, 1, 0},
+                                 {0, 0, 1},
+                                 {1, 1, 1},
+                                 {0, 0, 0}};
+    for (const auto& row : input) {
+        for (const auto &cell : row) {
+            cout << cell << " ";
+        }
+        cout << endl;
+    }
+    cout << endl;
     Solution s;
-    auto ans = s.maxDepthAfterSplit("(()())");
-    for (auto elem : ans) {
-        cout << elem << " ";
-    }
-    cout << endl;
-    ans = s.maxDepthAfterSplit("()(())()");
-    for (auto elem : ans) {
-        cout << elem << " ";
-    }
-    cout << endl;
-    ans = s.maxDepthAfterSplit("()((()))()");
-    for (auto elem : ans) {
-        cout << elem << " ";
+    s.gameOfLife(input);
+    for (const auto& row : input) {
+        for (const auto &cell : row) {
+            cout << cell << " ";
+        }
+        cout << endl;
     }
     cout << endl;
     return 0;
