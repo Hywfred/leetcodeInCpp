@@ -1,28 +1,16 @@
-#include "daily/GameOfLife.h"
+#include "daily/Atoi.h"
 #include <iostream>
-#include <vector>
 using namespace std;
 
 int main() {
-    vector<vector<int>> input = {{0, 1, 0},
-                                 {0, 0, 1},
-                                 {1, 1, 1},
-                                 {0, 0, 0}};
-    for (const auto& row : input) {
-        for (const auto &cell : row) {
-            cout << cell << " ";
-        }
-        cout << endl;
-    }
-    cout << endl;
-    Solution s;
-    s.gameOfLife(input);
-    for (const auto& row : input) {
-        for (const auto &cell : row) {
-            cout << cell << " ";
-        }
-        cout << endl;
-    }
-    cout << endl;
+    cout << Solution::myAtoi("42") << endl;
+    cout << Solution::myAtoi("    -42") << endl;
+    cout << Solution::myAtoi("4193 with words") << endl;
+    cout << Solution::myAtoi("words and 987") << endl;
+    cout << Solution::myAtoi("-91283472332") << endl;
+    cout << Solution::myAtoi("-2147483648") << endl;
+    cout << Solution::myAtoi("2147483648") << endl;
+    cout << Solution::myAtoi("2147483647") << endl;
+    cout << Solution::myAtoi("2147483646") << endl;
     return 0;
 }
