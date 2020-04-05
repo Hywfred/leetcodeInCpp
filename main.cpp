@@ -1,16 +1,10 @@
-#include "daily/Atoi.h"
+#include "daily/TrappingRainWater.h"
 #include <iostream>
 using namespace std;
 
 int main() {
-    cout << Solution::myAtoi("42") << endl;
-    cout << Solution::myAtoi("    -42") << endl;
-    cout << Solution::myAtoi("4193 with words") << endl;
-    cout << Solution::myAtoi("words and 987") << endl;
-    cout << Solution::myAtoi("-91283472332") << endl;
-    cout << Solution::myAtoi("-2147483648") << endl;
-    cout << Solution::myAtoi("2147483648") << endl;
-    cout << Solution::myAtoi("2147483647") << endl;
-    cout << Solution::myAtoi("2147483646") << endl;
+    vector<int> input{0,1,0,2,1,0,1,3,2,1,2,1};
+    Solution s;
+    cout << s.trap(input) << endl;
     return 0;
 }
