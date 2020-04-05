@@ -1,10 +1,8 @@
-#include "daily/TrappingRainWater.h"
+#include "daily/LFUCache.h"
 #include <iostream>
 using namespace std;
 
 int main() {
-    vector<int> input{0,1,0,2,1,0,1,3,2,1,2,1};
-    Solution s;
-    cout << s.trap(input) << endl;
+    LFUCache c(2);
     return 0;
 }
