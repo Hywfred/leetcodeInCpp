@@ -1,8 +1,12 @@
-#include "daily/LFUCache.h"
+#include "daily/EditDistance.h"
 #include <iostream>
 using namespace std;
 
 int main() {
-    LFUCache c(2);
+    Solution s;
+    cout << s.minDistance("horse", "ros") << endl;
+    cout << s.minDistance("intention", "execution") << endl;
+    cout << s.minDistance("", "execution") << endl;
+    cout << s.minDistance("", "") << endl;
     return 0;
 }
