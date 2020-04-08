@@ -38,6 +38,7 @@
 using namespace std;
 class Solution {
 public:
+    // 此外还有一种思路就是 先沿对角线旋转，然后左右翻转。
     void rotate(vector<vector<int>>& matrix) {
         int height = matrix.size();
         if (!height) return;
