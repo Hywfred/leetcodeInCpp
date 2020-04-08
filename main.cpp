@@ -1,13 +1,12 @@
-#include "daily/RotateMatrix.h"
+#include "daily/MoveAreaOfRobot.h"
 #include <iostream>
 using namespace std;
 
 int main() {
-    int a = 10;
-    int b = 10;
-    a = a ^ b;
-    b = a ^ b;
-    a = a ^ b;
-    cout << a << endl << b << endl;
+    Solution s;
+    cout << s.movingCount(11, 8, 16) << endl;
+    cout << s.movingCount(16, 8, 4) << endl;
+    cout << s.movingCount(2, 3, 1) << endl;
+    cout << s.movingCount(3, 1, 0) << endl;
     return 0;
 }
