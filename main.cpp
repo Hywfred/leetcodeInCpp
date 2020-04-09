@@ -1,12 +1,12 @@
-#include "daily/MoveAreaOfRobot.h"
+#include "daily/GenerateParentheses.h"
 #include <iostream>
 using namespace std;
 
 int main() {
     Solution s;
-    cout << s.movingCount(11, 8, 16) << endl;
-    cout << s.movingCount(16, 8, 4) << endl;
-    cout << s.movingCount(2, 3, 1) << endl;
-    cout << s.movingCount(3, 1, 0) << endl;
+    auto ans = s.generateParenthesis(4);
+    for (string elem : ans) {
+        cout << elem << endl;
+    }
     return 0;
 }
