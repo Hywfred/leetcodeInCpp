@@ -1,12 +1,13 @@
-#include "daily/GenerateParentheses.h"
+#include "daily/ReverseWordsInAStr.h"
 #include <iostream>
 using namespace std;
 
 int main() {
-    Solution s;
-    auto ans = s.generateParenthesis(4);
-    for (string elem : ans) {
-        cout << elem << endl;
-    }
+    cout << Solution::reverseWords("the sky is blue") << endl;
+    cout << Solution::reverseWords("  hello world!  ") << endl;
+    cout << Solution::reverseWords("a good   example") << endl;
+    cout << Solution::reverseWords(" sky ") << endl;
+    cout << Solution::reverseWords("   ") << endl;
+    cout << Solution::reverseWords("") << endl;
     return 0;
 }
