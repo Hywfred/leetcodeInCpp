@@ -1,13 +1,11 @@
-#include "daily/ReverseWordsInAStr.h"
+#include "daily/SuperEggDrop.h"
 #include <iostream>
 using namespace std;
 
 int main() {
-    cout << Solution::reverseWords("the sky is blue") << endl;
-    cout << Solution::reverseWords("  hello world!  ") << endl;
-    cout << Solution::reverseWords("a good   example") << endl;
-    cout << Solution::reverseWords(" sky ") << endl;
-    cout << Solution::reverseWords("   ") << endl;
-    cout << Solution::reverseWords("") << endl;
+    cout << Solution::superEggDrop(1, 2) << endl;
+    cout << Solution::superEggDrop(2, 6) << endl;
+    cout << Solution::superEggDrop(3, 14) << endl;
+    cout << Solution::superEggDrop(1, 3) << endl;
     return 0;
 }
