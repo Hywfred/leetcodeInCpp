@@ -1,11 +1,8 @@
-#include "daily/SuperEggDrop.h"
+#include "daily/Intersection.h"
 #include <iostream>
 using namespace std;
 
 int main() {
-    cout << Solution::superEggDrop(1, 2) << endl;
-    cout << Solution::superEggDrop(2, 6) << endl;
-    cout << Solution::superEggDrop(3, 14) << endl;
-    cout << Solution::superEggDrop(1, 3) << endl;
+    cout << (numeric_limits<double >::max() == numeric_limits<double >::max()) << endl;
     return 0;
 }
