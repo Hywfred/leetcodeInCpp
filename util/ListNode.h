@@ -5,6 +5,7 @@
 #ifndef LEETCODEINCPP_LISTNODE_H
 #define LEETCODEINCPP_LISTNODE_H
 
+#include <iostream>
 #include <vector>
 using  namespace std;
 struct ListNode {
