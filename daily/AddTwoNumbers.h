@@ -99,6 +99,10 @@ public:
             walker->next = newNode;
             walker = newNode;
         }
+        delete newL1;
+        newL1 = nullptr;
+        delete newL2;
+        newL2 = nullptr;
         return ans;
     }
 };
