@@ -1,13 +1,21 @@
-#include "daily/Matrix.h"
+#include "daily/MergeIntervals.h"
 #include <vector>
 #include <iostream>
+
 using namespace std;
 
 int main() {
-    vector<vector<int>> input {{0,0,0},{0,1,0},{1,1,1}};
-    input = {{1,0,1,1,1},{1,1,1,1,1},{1,1,0,1,1},{1,1,1,1,1},{1,1,1,1,1}};
+    vector<vector<int>> input{{1,  3},
+                              {2,  6},
+                              {8,  10},
+                              {15, 18}};
+//    input = {{1, 4},
+//             {4, 5},};
+
+    input = {{1, 4},
+             {2, 3},};
     Solution s;
-    auto ans = s.updateMatrix(input);
+    auto ans = s.merge(input);
     for (auto elem : ans) {
         for (auto cell : elem) {
             cout << cell << " ";
