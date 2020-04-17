@@ -1,26 +1,13 @@
-#include "daily/MergeIntervals.h"
+#include "daily/JumpGame.h"
 #include <vector>
 #include <iostream>
 
 using namespace std;
 
 int main() {
-    vector<vector<int>> input{{1,  3},
-                              {2,  6},
-                              {8,  10},
-                              {15, 18}};
-//    input = {{1, 4},
-//             {4, 5},};
-
-    input = {{1, 4},
-             {2, 3},};
+    vector<int> input{2, 3, 1, 1, 4};
+    input = {3, 2, 1, 0, 4};
     Solution s;
-    auto ans = s.merge(input);
-    for (auto elem : ans) {
-        for (auto cell : elem) {
-            cout << cell << " ";
-        }
-        cout << endl;
-    }
+    cout << boolalpha << s.canJump(input);
     return 0;
 }
