@@ -1,12 +1,23 @@
-#include "daily/ContainerWithMostWater.h"
+#include "daily/NumberOfIlands.h"
 #include <vector>
 #include <iostream>
 
 using namespace std;
 
 int main() {
-    vector<int> input {1,8,6,2,5,4,8,3,7};
+    vector<vector<char>> input{
+            {'1', '1', '1', '1', '0'},
+            {'1', '1', '0', '1', '0'},
+            {'1', '1', '0', '0', '0'},
+            {'0', '0', '0', '0', '0'}
+    };
+//    input = {
+//            {'1', '1', '0', '0', '0'},
+//            {'1', '1', '0', '0', '0'},
+//            {'0', '0', '1', '0', '0'},
+//            {'0', '0', '0', '1', '1'}
+//    };
     Solution s;
-    cout << s.maxArea(input) << endl;
+    cout << s.numIslands(input) << endl;
     return 0;
 }
