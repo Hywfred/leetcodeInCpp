@@ -1,23 +1,14 @@
-#include "daily/NumberOfIlands.h"
 #include <vector>
 #include <iostream>
+#include "util/ListNode.h"
+#include "hard/ReverseNodesInKGroup.h"
 
 using namespace std;
 
 int main() {
-    vector<vector<char>> input{
-            {'1', '1', '1', '1', '0'},
-            {'1', '1', '0', '1', '0'},
-            {'1', '1', '0', '0', '0'},
-            {'0', '0', '0', '0', '0'}
-    };
-//    input = {
-//            {'1', '1', '0', '0', '0'},
-//            {'1', '1', '0', '0', '0'},
-//            {'0', '0', '1', '0', '0'},
-//            {'0', '0', '0', '1', '1'}
-//    };
+    auto input = NewList(vector<int>{1, 2, 3, 4, 5});
     Solution s;
-    cout << s.numIslands(input) << endl;
+    auto ans = s.reverseKGroup(input, 2);
+    Print(ans);
     return 0;
 }
