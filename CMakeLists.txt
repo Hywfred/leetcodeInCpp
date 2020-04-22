@@ -1,12 +1,20 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.10)
 project(leetcodeInCpp)
 
 set(CMAKE_CXX_STANDARD 11)
-# add header files
-include_directories(./daily)
-# add source files
-aux_source_directory(./daily daily)
-aux_source_directory(./tree/easy easy)
-aux_source_directory(./test test)
-aux_source_directory(./hard hard)
-add_executable(${PROJECT_NAME} main.cpp ${daily} ${easy} ${test} ${hard})
+
+enable_testing()
+
+# add header dir
+include_directories(includes)
+include_directories(daily)
+
+# add sub dir
+add_subdirectory(util)
+add_subdirectory(mytest)
+add_subdirectory(daily)
+
+
+# add library dir
+link_libraries(lib)
+
