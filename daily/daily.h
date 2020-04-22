@@ -4,6 +4,7 @@
 
 #include <string>
 #include <vector>
+#include "../util/TreeNode.h"
 
 class Solution {
 public:
