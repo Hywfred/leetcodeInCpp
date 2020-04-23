@@ -21,15 +21,16 @@
  */
 #include "daily.h"
 
-static int coins[4] {1, 5, 10, 25};
+static int coins[4]{1, 5, 10, 25};
 
-static void change(int n, int &count, const int &lastVal) {
+static void change(int n, int &count, const int &lastVal)
+{
     // 退出条件
     if (!n)
     {
         ++count;
         return;
-    } 
+    }
     for (size_t i = 0; i < 4; i++)
     {
         if (n >= coins[i] && coins[i] <= lastVal)
@@ -37,8 +38,10 @@ static void change(int n, int &count, const int &lastVal) {
     }
 }
 
-int Solution::waysToChange(int n) {
-    if (!n) return 0;
+int Solution::waysToChange(int n)
+{
+    if (!n)
+        return 0;
     int count = 0;
     change(n, count, coins[3]);
     return count % 1000000007;
