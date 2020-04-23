@@ -4,14 +4,16 @@
 
 #include <string>
 #include <vector>
-#include "../util/TreeNode.h"
+#include <TreeNode.h>
 
 class Solution {
 public:
 	int strStr(std::string haystack, std::string needle);
 
-	// ∂˛≤Ê ˜”“ ”Õº
 	std::vector<int> rightSideView(TreeNode *root);
+
+	// Á°¨Â∏Å
+	int waysToChange(int n);
 };
 
 #endif // _DAILY_H

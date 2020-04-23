@@ -1,9 +1,7 @@
 # source files
 aux_source_directory(. SRCS)
 
-include_directories(${CMAKE_SOURCE_DIR}/util)
-
 # add shared library
-add_library(daily SHARED ${SRCS})
+add_library(daily STATIC ${SRCS})
 
-target_include_directories(daily PUBLIC ${CMAKE_SOURCE_DIR}/util)
+target_link_libraries(daily libutil)

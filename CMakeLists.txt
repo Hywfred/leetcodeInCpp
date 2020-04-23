@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 enable_testing()
 
 # add header dir
-include_directories(includes daily)
+include_directories(includes daily util)
 
 # add sub dir
 add_subdirectory(daily)
