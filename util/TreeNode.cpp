@@ -14,6 +14,7 @@ TreeNode *GenerateBT(vector<int> &arr, int start) {
     TreeNode *root = new TreeNode(arr.at(start));
     root->left = GenerateBT(arr, 2 * start + 1);
     root->right = GenerateBT(arr, 2 * start + 2);
+	return root;
 }
 
 // Ç°Ğò±éÀú

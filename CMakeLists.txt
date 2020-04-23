@@ -12,7 +12,3 @@ include_directories(includes daily)
 add_subdirectory(daily)
 add_subdirectory(util)
 add_subdirectory(mytest)
-
-
-# add library dir
-add_dependencies(daily libutil)
