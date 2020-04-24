@@ -22,6 +22,9 @@
             "linux": { //linux的特定配置
                 "MIMode": "gdb", //指定使用gdb调试
                 "setupCommands": [
+                    { "text": "-enable-pretty-printing", "description": "enable pretty printing", "ignoreFailures": true },
+
+                    { "text": "handle SIGPIPE nostop noprint pass", "description": "ignore SIGPIPE", "ignoreFailures": true },
                     {
                         "description": "Enable pretty-printing for gdb",
                         "text": "-enable-pretty-printing",
@@ -31,8 +34,14 @@
             },
             "windows": { //windows的特定配置
                 "MIMode": "gdb", //指定使用msvc进行调试
-                "miDebuggerPath": "E:/mingw64/bin/gdb.exe",
+                "miDebuggerPath": "E:/x86_64-8.1.0-release-win32-seh-rt_v6-rev0/mingw64/bin/gdb.exe",
                 "program": "${workspaceFolder}/build/mytest/mytest.exe", //指定C/C++程序位置
+                "setupCommands": [
+
+                    { "text": "-enable-pretty-printing", "description": "enable pretty printing", "ignoreFailures": true },
+
+                    { "text": "handle SIGPIPE nostop noprint pass", "description": "ignore SIGPIPE", "ignoreFailures": true }  
+                ]
             }
         }
     ]

@@ -4,7 +4,7 @@
 
 #include <string>
 #include <vector>
-#include <TreeNode.h>
+#include "TreeNode.h"
 
 class Solution {
 public:
@@ -14,6 +14,9 @@ public:
 
 	// 硬币
 	int waysToChange(int n);
+
+	// 数组中的逆序对
+	int reversePairs(std::vector<int>& nums);
 };
 
 #endif // _DAILY_H
