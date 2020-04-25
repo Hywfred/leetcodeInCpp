@@ -4,22 +4,23 @@
 
 #include <string>
 #include <vector>
+
 #include "TreeNode.h"
 
 class Solution {
-public:
-	int strStr(std::string haystack, std::string needle);
+   public:
+    int strStr(std::string haystack, std::string needle);
 
-	std::vector<int> rightSideView(TreeNode *root);
+    std::vector<int> rightSideView(TreeNode *root);
 
-	// 硬币
-	int waysToChange(int n);
+    // 硬币 20.04.23
+    int waysToChange(int n);
 
-	// 数组中的逆序对
-	int reversePairs(std::vector<int>& nums);
+    // 数组中的逆序对  20.04.24
+    int reversePairs(std::vector<int> &nums);
 
-	// 全排列
-	std::vector<std::vector<int>> permute(std::vector<int>& nums);
+    // 全排列 20.04.25
+    std::vector<std::vector<int>> permute(std::vector<int> &nums);
 };
 
-#endif // _DAILY_H
+#endif  // _DAILY_H
