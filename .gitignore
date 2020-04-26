@@ -75,9 +75,9 @@ fabric.properties
 .vscode/*
 # !.vscode/settings.json
 !.vscode/tasks.json
-!.vscode/launch.json
+# !.vscode/launch.json
 !.vscode/extensions.json
-!.vscode/c_cpp_properties.json
+# !.vscode/c_cpp_properties.json
 
 # C++ ================================
  Prerequisites

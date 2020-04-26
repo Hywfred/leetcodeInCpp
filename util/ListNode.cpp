@@ -2,7 +2,7 @@
 
 using namespace std;
 
-ListNode *NewList(vector<int> &input) {
+ListNode *NewList(const vector<int> &input) {
     int len = input.size();
     if (!len) {
         return nullptr;
