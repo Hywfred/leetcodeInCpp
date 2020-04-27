@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 
+#include "ListNode.h"
 #include "TreeNode.h"
 
 class Solution {
@@ -21,6 +22,9 @@ class Solution {
 
     // 全排列 20.04.25
     std::vector<std::vector<int>> permute(std::vector<int> &nums);
+
+    // 合并 K 个排序链表 20.04.26
+    ListNode *mergeKLists(std::vector<ListNode *> &lists);
 };
 
 #endif  // _DAILY_H

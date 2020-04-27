@@ -13,6 +13,6 @@ struct ListNode {
 	ListNode(int x) : val(x), next(nullptr) {}
 };
 
-ListNode *NewList(std::vector<int> &input);
+ListNode *NewList(const std::vector<int> &input);
 void Print(ListNode *head);
 #endif //LEETCODEINCPP_LISTNODE_H

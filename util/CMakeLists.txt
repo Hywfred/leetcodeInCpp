@@ -1,2 +1,2 @@
-aux_source_directory(. SRCS)
-add_library(libutil STATIC ${SRCS})
+aux_source_directory(. util_src)
+add_library(libutil STATIC ${util_src})
