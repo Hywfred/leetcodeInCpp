@@ -25,6 +25,9 @@ class Solution {
 
     // 合并 K 个排序链表 20.04.26
     ListNode *mergeKLists(std::vector<ListNode *> &lists);
+
+    // 搜索旋转排序数组 20.04.27
+    int search(std::vector<int>& nums, int target);
 };
 
 #endif  // _DAILY_H
