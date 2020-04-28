@@ -28,6 +28,9 @@ class Solution {
 
     // 搜索旋转排序数组 20.04.27
     int search(std::vector<int>& nums, int target);
+
+    // 数组中数字出现的次数 20.04.28
+    std::vector<int> singleNumbers(std::vector<int>& nums);
 };
 
 #endif  // _DAILY_H
