@@ -8,8 +8,22 @@
 #include "ListNode.h"
 #include "TreeNode.h"
 
+/**
+ *  This is the MountainArray's API interface.
+ *  You should not implement it, or speculate about its implementation
+ */
+class MountainArray {
+  public:
+    MountainArray(const std::vector<int> &arr) : m_arr(arr) {}
+    int get(int index);
+    int length();
+    void set(const std::vector<int> &arr);
+  private:
+    std::vector<int> m_arr;
+};
+
 class Solution {
-   public:
+  public:
     int strStr(std::string haystack, std::string needle);
 
     std::vector<int> rightSideView(TreeNode *root);
@@ -27,10 +41,15 @@ class Solution {
     ListNode *mergeKLists(std::vector<ListNode *> &lists);
 
     // 搜索旋转排序数组 20.04.27
-    int search(std::vector<int>& nums, int target);
+    int search(std::vector<int> &nums, int target);
 
     // 数组中数字出现的次数 20.04.28
-    std::vector<int> singleNumbers(std::vector<int>& nums);
+    std::vector<int> singleNumbers(std::vector<int> &nums);
+
+    //
+    int findInMountainArray(int target, MountainArray &mountainArr);
 };
+
+int findMountainTop(MountainArray &m);
 
 #endif  // _DAILY_H
