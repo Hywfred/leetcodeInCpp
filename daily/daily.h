@@ -46,8 +46,11 @@ class Solution {
     // 数组中数字出现的次数 20.04.28
     std::vector<int> singleNumbers(std::vector<int> &nums);
 
-    //
+    // 山脉数组 20.04.29
     int findInMountainArray(int target, MountainArray &mountainArr);
+
+    // 快乐数 20.04.30
+    bool isHappy(int n);
 };
 
 int findMountainTop(MountainArray &m);
