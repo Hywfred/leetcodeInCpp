@@ -36,11 +36,11 @@ bool Solution::isHappy(int n) {
     int slow = n, fast = n;
     do {
         slow = getNext(slow);
-        cout << "slow: \t" << slow << endl;
+        // cout << "slow: \t" << slow << endl;
         fast = getNext(getNext(fast));
-        cout << "fast: \t" << fast << endl;
+        // cout << "fast: \t" << fast << endl;
     } while (slow != fast);
-    cout << "Meet! \t\t" << fast << endl;
+    // cout << "Meet! \t\t" << fast << endl;
     return slow == 1 ? true : false;
 }
 

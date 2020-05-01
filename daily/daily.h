@@ -51,6 +51,9 @@ class Solution {
 
     // 快乐数 20.04.30
     bool isHappy(int n);
+
+    // 合并两个有序链表
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2);
 };
 
 int findMountainTop(MountainArray &m);
