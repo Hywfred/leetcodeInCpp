@@ -52,8 +52,11 @@ class Solution {
     // 快乐数 20.04.30
     bool isHappy(int n);
 
-    // 合并两个有序链表
+    // 合并两个有序链表 20.05.01
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2);
+
+    // 无重复字符的最长子串 20.05.02
+    int lengthOfLongestSubstring(std::string s);
 };
 
 int findMountainTop(MountainArray &m);
