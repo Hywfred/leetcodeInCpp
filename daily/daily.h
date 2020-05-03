@@ -57,6 +57,9 @@ class Solution {
 
     // 无重复字符的最长子串 20.05.02
     int lengthOfLongestSubstring(std::string s);
+
+    // 最大子序和 20.05.03
+    int maxSubArray(std::vector<int>& nums);
 };
 
 int findMountainTop(MountainArray &m);
