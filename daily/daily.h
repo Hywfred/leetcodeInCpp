@@ -60,6 +60,9 @@ class Solution {
 
     // 最大子序和 20.05.03
     int maxSubArray(std::vector<int>& nums);
+
+    // 跳跃游戏 II 20.05.04
+    int jump(std::vector<int>& nums);
 };
 
 int findMountainTop(MountainArray &m);
