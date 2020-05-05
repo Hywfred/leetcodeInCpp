@@ -2,6 +2,7 @@
 #ifndef _DAILY_H
 #define _DAILY_H
 
+#include <climits>
 #include <string>
 #include <vector>
 
@@ -18,12 +19,19 @@ class MountainArray {
     int get(int index);
     int length();
     void set(const std::vector<int> &arr);
+
   private:
     std::vector<int> m_arr;
 };
 
 class Solution {
   public:
+    Solution() : pre(LONG_MIN) {}
+
+    void set_pre() {
+      pre = LONG_MIN;
+    }
+
     int strStr(std::string haystack, std::string needle);
 
     std::vector<int> rightSideView(TreeNode *root);
@@ -53,16 +61,22 @@ class Solution {
     bool isHappy(int n);
 
     // 合并两个有序链表 20.05.01
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2);
+    ListNode *mergeTwoLists(ListNode *l1, ListNode *l2);
 
     // 无重复字符的最长子串 20.05.02
     int lengthOfLongestSubstring(std::string s);
 
     // 最大子序和 20.05.03
-    int maxSubArray(std::vector<int>& nums);
+    int maxSubArray(std::vector<int> &nums);
 
     // 跳跃游戏 II 20.05.04
-    int jump(std::vector<int>& nums);
+    int jump(std::vector<int> &nums);
+
+    // 验证二叉搜索树 20.05.05
+    bool isValidBST(TreeNode *root);
+
+  private:
+    long pre;
 };
 
 int findMountainTop(MountainArray &m);

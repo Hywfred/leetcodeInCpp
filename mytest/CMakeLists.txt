@@ -10,6 +10,7 @@ link_directories(${CMAKE_SOURCE_DIR}/lib)
 set(longest_sub_str LongestSubStr-test.cpp)
 set(max_sub_arr MaximumSubArr-test.cpp)
 set(jump_game_src JumpGameII-test.cpp)
+set(validbst_src ValidBst-test.cpp)
 
 # 最长不重复子串
 add_executable(lgstSubStr ${longest_sub_str})
@@ -23,3 +24,8 @@ target_link_libraries(maximumSubArr daily "gtest" "gtest_main")
 add_executable(jumpgame ${jump_game_src})
 add_test(jumpgame jumpgame)
 target_link_libraries(jumpgame daily "gtest" "gtest_main")
+
+# 验证二叉搜索树
+add_executable(validbst ${validbst_src})
+add_test(validbst validbst)
+target_link_libraries(validbst daily "gtest" "gtest_main")
