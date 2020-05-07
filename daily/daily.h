@@ -75,8 +75,11 @@ class Solution {
     // 验证二叉搜索树 20.05.05
     bool isValidBST(TreeNode *root);
 
-    // 最低票价
+    // 最低票价 20.05.06
     int mincostTickets(std::vector<int>& days, std::vector<int>& costs);
+
+    // 另一棵树的子树 20.05.07
+    bool isSubtree(TreeNode* s, TreeNode* t);
 
   private:
     long pre;

@@ -12,6 +12,7 @@ set(max_sub_arr MaximumSubArr-test.cpp)
 set(jump_game_src JumpGameII-test.cpp)
 set(validbst_src ValidBst-test.cpp)
 set(mincosts_src MinCost4Tickets-test.cpp)
+set(subtree_src Subtree-test.cpp)
 
 # 最长不重复子串
 add_executable(lgstSubStr ${longest_sub_str})
@@ -31,8 +32,13 @@ add_executable(validbst ${validbst_src})
 add_test(validbst validbst)
 target_link_libraries(validbst daily "gtest" "gtest_main")
 
-
 # 最低票价
 add_executable(mincosts ${mincosts_src})
 add_test(mincosts mincosts)
 target_link_libraries(mincosts daily "gtest" "gtest_main")
+
+
+# 另一棵树的子树
+add_executable(subtree ${subtree_src})
+add_test(subtree subtree)
+target_link_libraries(subtree daily "gtest" "gtest_main")
