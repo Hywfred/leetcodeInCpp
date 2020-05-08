@@ -81,6 +81,9 @@ class Solution {
     // 另一棵树的子树 20.05.07
     bool isSubtree(TreeNode* s, TreeNode* t);
 
+    // 最大正方形20.05.08
+    int maximalSquare(std::vector<std::vector<char>>& matrix);
+
   private:
     long pre;
 };

@@ -13,6 +13,7 @@ set(jump_game_src JumpGameII-test.cpp)
 set(validbst_src ValidBst-test.cpp)
 set(mincosts_src MinCost4Tickets-test.cpp)
 set(subtree_src Subtree-test.cpp)
+set(maxSquare_src MaximalSquare-test.cpp)
 
 # 最长不重复子串
 add_executable(lgstSubStr ${longest_sub_str})
@@ -42,3 +43,8 @@ target_link_libraries(mincosts daily "gtest" "gtest_main")
 add_executable(subtree ${subtree_src})
 add_test(subtree subtree)
 target_link_libraries(subtree daily "gtest" "gtest_main")
+
+# 最大的正方形
+add_executable(maxSquare ${maxSquare_src})
+add_test(maxSquare maxSquare)
+target_link_libraries(maxSquare daily "gtest" "gtest_main")
