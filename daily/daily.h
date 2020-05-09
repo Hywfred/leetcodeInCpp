@@ -84,6 +84,9 @@ class Solution {
     // 最大正方形20.05.08
     int maximalSquare(std::vector<std::vector<char>>& matrix);
 
+    // x 的平方根 20.05.09
+    int mySqrt(int x);
+
   private:
     long pre;
 };

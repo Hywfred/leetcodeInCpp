@@ -14,6 +14,7 @@ set(validbst_src ValidBst-test.cpp)
 set(mincosts_src MinCost4Tickets-test.cpp)
 set(subtree_src Subtree-test.cpp)
 set(maxSquare_src MaximalSquare-test.cpp)
+set(sqrtx_src SqrtX-test.cpp)
 
 # 最长不重复子串
 add_executable(lgstSubStr ${longest_sub_str})
@@ -48,3 +49,8 @@ target_link_libraries(subtree daily "gtest" "gtest_main")
 add_executable(maxSquare ${maxSquare_src})
 add_test(maxSquare maxSquare)
 target_link_libraries(maxSquare daily "gtest" "gtest_main")
+
+# x 的平方根
+add_executable(sqrtX ${sqrtx_src})
+add_test( sqrtX sqrtX)
+target_link_libraries(sqrtX daily "gtest" "gtest_main")
