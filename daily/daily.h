@@ -87,6 +87,9 @@ class Solution {
     // x 的平方根 20.05.09
     int mySqrt(int x);
 
+    // 最近公共祖先 20.05.10
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q);
+
   private:
     long pre;
 };
