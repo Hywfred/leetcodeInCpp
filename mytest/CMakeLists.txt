@@ -15,6 +15,12 @@ set(mincosts_src MinCost4Tickets-test.cpp)
 set(subtree_src Subtree-test.cpp)
 set(maxSquare_src MaximalSquare-test.cpp)
 set(sqrtx_src SqrtX-test.cpp)
+set(power_src PowerXN-test.cpp)
+
+# power(x, n)
+add_executable(power ${power_src})
+add_test( power power)
+target_link_libraries(power daily "gtest" "gtest_main")
 
 # 最长不重复子串
 add_executable(lgstSubStr ${longest_sub_str})

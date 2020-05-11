@@ -90,6 +90,9 @@ class Solution {
     // 最近公共祖先 20.05.10
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q);
 
+    // 实现 pow(x, n) 20.05.11
+    double myPow(double x, long long n);
+
   private:
     long pre;
 };
