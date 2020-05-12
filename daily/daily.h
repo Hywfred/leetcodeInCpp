@@ -3,8 +3,10 @@
 #define _DAILY_H
 
 #include <climits>
+#include <stack>
 #include <string>
 #include <vector>
+#include <set>
 
 #include "ListNode.h"
 #include "TreeNode.h"
@@ -28,9 +30,7 @@ class Solution {
   public:
     Solution() : pre(LONG_MIN) {}
 
-    void set_pre() {
-      pre = LONG_MIN;
-    }
+    void set_pre() { pre = LONG_MIN; }
 
     int strStr(std::string haystack, std::string needle);
 
@@ -76,19 +76,19 @@ class Solution {
     bool isValidBST(TreeNode *root);
 
     // 最低票价 20.05.06
-    int mincostTickets(std::vector<int>& days, std::vector<int>& costs);
+    int mincostTickets(std::vector<int> &days, std::vector<int> &costs);
 
     // 另一棵树的子树 20.05.07
-    bool isSubtree(TreeNode* s, TreeNode* t);
+    bool isSubtree(TreeNode *s, TreeNode *t);
 
     // 最大正方形20.05.08
-    int maximalSquare(std::vector<std::vector<char>>& matrix);
+    int maximalSquare(std::vector<std::vector<char>> &matrix);
 
     // x 的平方根 20.05.09
     int mySqrt(int x);
 
     // 最近公共祖先 20.05.10
-    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q);
+    TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q);
 
     // 实现 pow(x, n) 20.05.11
     double myPow(double x, long long n);
@@ -98,5 +98,23 @@ class Solution {
 };
 
 int findMountainTop(MountainArray &m);
+
+class MinStack {
+  public:
+    /** initialize your data structure here. */
+    MinStack() {}
+
+    void push(int x);
+
+    void pop();
+
+    int top();
+
+    int getMin();
+
+  private:
+    std::stack<int> m_data;
+    std::multiset<int> order;
+};
 
 #endif  // _DAILY_H

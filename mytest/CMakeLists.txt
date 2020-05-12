@@ -16,6 +16,12 @@ set(subtree_src Subtree-test.cpp)
 set(maxSquare_src MaximalSquare-test.cpp)
 set(sqrtx_src SqrtX-test.cpp)
 set(power_src PowerXN-test.cpp)
+set(minstack_src MinStack-test.cpp)
+
+# min stack
+add_executable(minstack ${minstack_src})
+add_test( minstack minstack)
+target_link_libraries(minstack daily "gtest" "gtest_main")
 
 # power(x, n)
 add_executable(power ${power_src})
