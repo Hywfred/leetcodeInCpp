@@ -93,12 +93,16 @@ class Solution {
     // 实现 pow(x, n) 20.05.11
     double myPow(double x, long long n);
 
+    // 二叉树的层序遍历 20.05.13
+    std::vector<std::vector<int>> levelOrder(TreeNode* root);
+
   private:
     long pre;
 };
 
 int findMountainTop(MountainArray &m);
 
+// 最小栈 20.05.12
 class MinStack {
   public:
     /** initialize your data structure here. */
