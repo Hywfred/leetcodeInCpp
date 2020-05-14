@@ -3,10 +3,10 @@
 #define _DAILY_H
 
 #include <climits>
+#include <set>
 #include <stack>
 #include <string>
 #include <vector>
-#include <set>
 
 #include "ListNode.h"
 #include "TreeNode.h"
@@ -94,7 +94,10 @@ class Solution {
     double myPow(double x, long long n);
 
     // 二叉树的层序遍历 20.05.13
-    std::vector<std::vector<int>> levelOrder(TreeNode* root);
+    std::vector<std::vector<int>> levelOrder(TreeNode *root);
+
+    // 只出现一次的数字 20.05.14
+    int singleNumberII(std::vector<int> &nums);
 
   private:
     long pre;

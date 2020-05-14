@@ -18,11 +18,12 @@ set(sqrtx_src SqrtX-test.cpp)
 set(power_src PowerXN-test.cpp)
 set(minstack_src MinStack-test.cpp)
 set(levelorder_src LevelOrder-test.cpp)
+set(single_number_src SingleNumberII-test.cpp)
 
-# level order
-add_executable(level ${levelorder_src})
-add_test( level level)
-target_link_libraries(level daily "gtest" "gtest_main")
+# single_number
+add_executable(single_number ${single_number_src})
+add_test( single_number single_number)
+target_link_libraries(single_number daily "gtest" "gtest_main")
 
 # min stack
 add_executable(minstack ${minstack_src})
