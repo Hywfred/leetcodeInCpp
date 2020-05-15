@@ -19,6 +19,12 @@ set(power_src PowerXN-test.cpp)
 set(minstack_src MinStack-test.cpp)
 set(levelorder_src LevelOrder-test.cpp)
 set(single_number_src SingleNumberII-test.cpp)
+set(subarr_sum_k_src SubarrSumk-test.cpp)
+
+# subarray sum = k
+add_executable(subarr_sum_k ${subarr_sum_k_src})
+add_test( subarr_sum_k subarr_sum_k)
+target_link_libraries(subarr_sum_k daily "gtest" "gtest_main")
 
 # single_number
 add_executable(single_number ${single_number_src})

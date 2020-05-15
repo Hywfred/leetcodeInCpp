@@ -99,6 +99,9 @@ class Solution {
     // 只出现一次的数字 20.05.14
     int singleNumberII(std::vector<int> &nums);
 
+    // 和为 k 的子数组
+    int subarraySum(std::vector<int> &nums, int k);
+
   private:
     long pre;
 };
