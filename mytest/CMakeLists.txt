@@ -20,6 +20,12 @@ set(minstack_src MinStack-test.cpp)
 set(levelorder_src LevelOrder-test.cpp)
 set(single_number_src SingleNumberII-test.cpp)
 set(subarr_sum_k_src SubarrSumk-test.cpp)
+set(reverse_k_src Reversek-test.cpp)
+
+# reverse k group
+add_executable(reverseK ${reverse_k_src})
+add_test( reverseK reverseK)
+target_link_libraries(reverseK daily "gtest" "gtest_main")
 
 # subarray sum = k
 add_executable(subarr_sum_k ${subarr_sum_k_src})

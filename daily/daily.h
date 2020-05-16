@@ -99,8 +99,11 @@ class Solution {
     // 只出现一次的数字 20.05.14
     int singleNumberII(std::vector<int> &nums);
 
-    // 和为 k 的子数组
+    // 和为 k 的子数组 20.05.15
     int subarraySum(std::vector<int> &nums, int k);
+
+    // k 个一组翻转链表 20.05.16
+    ListNode *reverseKGroup(ListNode *head, int k);
 
   private:
     long pre;
