@@ -105,6 +105,9 @@ class Solution {
     // k 个一组翻转链表 20.05.16
     ListNode *reverseKGroup(ListNode *head, int k);
 
+    // 课程表 II 20.05.17
+    std::vector<int> findOrder(int numCourses, std::vector<std::vector<int>> &prerequisites);
+
   private:
     long pre;
 };

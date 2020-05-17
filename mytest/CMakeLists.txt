@@ -21,6 +21,12 @@ set(levelorder_src LevelOrder-test.cpp)
 set(single_number_src SingleNumberII-test.cpp)
 set(subarr_sum_k_src SubarrSumk-test.cpp)
 set(reverse_k_src Reversek-test.cpp)
+set(course_schedule_ii_src CourseScheduleII-test.cpp)
+
+# course schedule ii
+add_executable(course_schedule_ii ${course_schedule_ii_src})
+add_test( course_schedule_ii course_schedule_ii)
+target_link_libraries(course_schedule_ii daily "gtest" "gtest_main")
 
 # reverse k group
 add_executable(reverseK ${reverse_k_src})
