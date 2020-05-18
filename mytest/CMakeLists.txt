@@ -22,6 +22,12 @@ set(single_number_src SingleNumberII-test.cpp)
 set(subarr_sum_k_src SubarrSumk-test.cpp)
 set(reverse_k_src Reversek-test.cpp)
 set(course_schedule_ii_src CourseScheduleII-test.cpp)
+set(max_product_src MaxProduct-test.cpp)
+
+# max product
+add_executable(max_product ${max_product_src})
+add_test( max_product max_product)
+target_link_libraries(max_product daily "gtest" "gtest_main")
 
 # course schedule ii
 add_executable(course_schedule_ii ${course_schedule_ii_src})

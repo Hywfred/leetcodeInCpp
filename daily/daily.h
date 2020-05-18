@@ -108,6 +108,9 @@ class Solution {
     // 课程表 II 20.05.17
     std::vector<int> findOrder(int numCourses, std::vector<std::vector<int>> &prerequisites);
 
+    // 乘积最大子数组 20.05.18
+    int maxProduct(std::vector<int> &nums);
+
   private:
     long pre;
 };
