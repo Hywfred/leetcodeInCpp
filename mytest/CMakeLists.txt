@@ -23,6 +23,12 @@ set(subarr_sum_k_src SubarrSumk-test.cpp)
 set(reverse_k_src Reversek-test.cpp)
 set(course_schedule_ii_src CourseScheduleII-test.cpp)
 set(max_product_src MaxProduct-test.cpp)
+set(valid_palindrome_ii_src ValidPalindromeII-test.cpp)
+
+# valid palindrome II
+add_executable(valid_palindrome_ii ${valid_palindrome_ii_src})
+add_test( valid_palindrome_ii valid_palindrome_ii)
+target_link_libraries(valid_palindrome_ii daily "gtest" "gtest_main")
 
 # max product
 add_executable(max_product ${max_product_src})

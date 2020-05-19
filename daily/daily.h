@@ -111,6 +111,9 @@ class Solution {
     // 乘积最大子数组 20.05.18
     int maxProduct(std::vector<int> &nums);
 
+    // 验证回文字符串 ii 20.05.19
+    bool validPalindrome(std::string s);
+
   private:
     long pre;
 };
