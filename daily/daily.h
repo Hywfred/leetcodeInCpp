@@ -114,6 +114,9 @@ class Solution {
     // 验证回文字符串 ii 20.05.19
     bool validPalindrome(std::string s);
 
+    // 每个元音包含偶数次的最长子字符串 20.05.20
+    int findTheLongestSubstring(std::string s);
+
   private:
     long pre;
 };

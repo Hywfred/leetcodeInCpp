@@ -24,6 +24,12 @@ set(reverse_k_src Reversek-test.cpp)
 set(course_schedule_ii_src CourseScheduleII-test.cpp)
 set(max_product_src MaxProduct-test.cpp)
 set(valid_palindrome_ii_src ValidPalindromeII-test.cpp)
+set(vowels_src Vowels-test.cpp)
+
+# find longest substring of s ion which vowels' count is even
+add_executable(vowels ${vowels_src})
+add_test( vowels vowels)
+target_link_libraries(vowels daily "gtest" "gtest_main")
 
 # valid palindrome II
 add_executable(valid_palindrome_ii ${valid_palindrome_ii_src})
