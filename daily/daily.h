@@ -117,6 +117,9 @@ class Solution {
     // 每个元音包含偶数次的最长子字符串 20.05.20
     int findTheLongestSubstring(std::string s);
 
+    // 最长回文子串
+    std::string longestPalindrome(std::string s);
+
   private:
     long pre;
 };

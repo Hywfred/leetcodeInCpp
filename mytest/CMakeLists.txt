@@ -25,6 +25,12 @@ set(course_schedule_ii_src CourseScheduleII-test.cpp)
 set(max_product_src MaxProduct-test.cpp)
 set(valid_palindrome_ii_src ValidPalindromeII-test.cpp)
 set(vowels_src Vowels-test.cpp)
+set(longest_palindrome_src LongestPalindrome-test.cpp)
+
+# find longest substring of s ion which vowels' count is even
+add_executable(longest_palindrome ${longest_palindrome_src})
+add_test( longest_palindrome longest_palindrome)
+target_link_libraries(longest_palindrome daily "gtest" "gtest_main")
 
 # find longest substring of s ion which vowels' count is even
 add_executable(vowels ${vowels_src})
