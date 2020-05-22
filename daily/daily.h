@@ -120,6 +120,9 @@ class Solution {
     // 最长回文子串
     std::string longestPalindrome(std::string s);
 
+    // 根据前序与中序遍历序列构建二叉树 20.05.22
+    TreeNode *buildTree(std::vector<int> &preorder, std::vector<int> &inorder);
+
   private:
     long pre;
 };

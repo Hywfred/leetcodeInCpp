@@ -26,6 +26,12 @@ set(max_product_src MaxProduct-test.cpp)
 set(valid_palindrome_ii_src ValidPalindromeII-test.cpp)
 set(vowels_src Vowels-test.cpp)
 set(longest_palindrome_src LongestPalindrome-test.cpp)
+set(construct_binarytree_i_src construct_binarytree_i_test.cc)
+
+# construct binary tree from preorder and inorder traversal
+add_executable(construct_binarytree_i ${construct_binarytree_i_src})
+add_test( construct_binarytree_i construct_binarytree_i)
+target_link_libraries(construct_binarytree_i daily "gtest" "gtest_main")
 
 # find longest substring of s ion which vowels' count is even
 add_executable(longest_palindrome ${longest_palindrome_src})
