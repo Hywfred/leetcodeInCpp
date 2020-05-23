@@ -27,6 +27,12 @@ set(valid_palindrome_ii_src ValidPalindromeII-test.cpp)
 set(vowels_src Vowels-test.cpp)
 set(longest_palindrome_src LongestPalindrome-test.cpp)
 set(construct_binarytree_i_src construct_binarytree_i_test.cc)
+set(minimum_window_substring_src minimum_window_substring_test.cc)
+
+# construct binary tree from preorder and inorder traversal
+add_executable(minimum_window_substring ${minimum_window_substring_src})
+add_test( minimum_window_substring minimum_window_substring)
+target_link_libraries(minimum_window_substring daily "gtest" "gtest_main")
 
 # construct binary tree from preorder and inorder traversal
 add_executable(construct_binarytree_i ${construct_binarytree_i_src})

@@ -123,6 +123,9 @@ class Solution {
     // 根据前序与中序遍历序列构建二叉树 20.05.22
     TreeNode *buildTree(std::vector<int> &preorder, std::vector<int> &inorder);
 
+    // 最小覆盖子串 20.05.23
+    std::string minWindow(std::string s, std::string t);
+
   private:
     long pre;
 };
