@@ -126,6 +126,9 @@ class Solution {
     // 最小覆盖子串 20.05.23
     std::string minWindow(std::string s, std::string t);
 
+    // 寻找两个正序数组的中位数
+    double findMedianSortedArrays(std::vector<int> &nums1, std::vector<int> &nums2);
+
   private:
     long pre;
 };

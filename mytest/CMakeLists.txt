@@ -28,6 +28,12 @@ set(vowels_src Vowels-test.cpp)
 set(longest_palindrome_src LongestPalindrome-test.cpp)
 set(construct_binarytree_i_src construct_binarytree_i_test.cc)
 set(minimum_window_substring_src minimum_window_substring_test.cc)
+set(median_of_two_sorted_arrays_src median_of_two_sorted_arrays_test.cc)
+
+# find median of two sorted arrays
+add_executable(median_of_two_sorted_arrays ${median_of_two_sorted_arrays_src})
+add_test( median_of_two_sorted_arrays median_of_two_sorted_arrays)
+target_link_libraries(median_of_two_sorted_arrays daily "gtest" "gtest_main")
 
 # construct binary tree from preorder and inorder traversal
 add_executable(minimum_window_substring ${minimum_window_substring_src})
