@@ -3,9 +3,11 @@
 #define _DAILY_H
 
 #include <climits>
+#include <list>
 #include <set>
 #include <stack>
 #include <string>
+#include <unordered_map>
 #include <vector>
 
 #include "ListNode.h"
@@ -149,6 +151,26 @@ class MinStack {
   private:
     std::stack<int> m_data;
     std::multiset<int> order;
+};
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * LRUCache* obj = new LRUCache(capacity);
+ * int param_1 = obj->get(key);
+ * obj->put(key,value);
+ */
+class LRUCache {
+  public:
+    using val_iter_type = std::list<std::pair<int, int>>::iterator;
+    LRUCache(int capacity);
+
+    int get(int key);
+
+    void put(int key, int value);
+
+    std::unordered_map<int, val_iter_type> kvs_;
+    std::list<std::pair<int, int>> nodes_;
+    int cap_;
 };
 
 #endif  // _DAILY_H
