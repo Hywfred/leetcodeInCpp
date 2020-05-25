@@ -26,7 +26,11 @@ int LRUCache::get(int key) {
     auto pos = kvs_.find(key);
     if (pos != kvs_.end()) {
         // 更新位置，提到最开始的位置
-        nodes_.splice(nodes_.begin(), nodes_, pos->second);
+        // nodes_.splice(nodes_.begin(), nodes_, pos->second);
+        auto p = *pos->second;
+        nodes_.erase(pos->second);
+        nodes_.push_front(p);
+        kvs_[key] = nodes_.begin();
         // 返回对应的 value
         return pos->second->second;
     } else {
@@ -48,13 +52,21 @@ void LRUCache::put(int key, int value) {
             kvs_[key] = nodes_.begin();
         } else {
             pos->second->second = value;
-            nodes_.splice(nodes_.begin(), nodes_, pos->second);
+            // nodes_.splice(nodes_.begin(), nodes_, pos->second);
+            auto p = *pos->second;
+            nodes_.erase(pos->second);
+            nodes_.push_front(p);
+            kvs_[key] = nodes_.begin();
         }
     } else {
         if (pos != kvs_.end()) {  // 如果键存在
             auto it = kvs_[key];
             it->second = value;
-            nodes_.splice(nodes_.begin(), nodes_, it);
+            // nodes_.splice(nodes_.begin(), nodes_, it);
+            auto p = *it;
+            nodes_.erase(it);
+            nodes_.push_front(p);
+            kvs_[key] = nodes_.begin();
         } else {
             nodes_.push_front({key, value});
             kvs_[key] = nodes_.begin();

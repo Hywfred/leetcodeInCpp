@@ -31,5 +31,5 @@ TEST(mytest, lru_cache) {
     ans = cahce1.get(1);
     EXPECT_EQ(ans, 2);
     ans = cahce1.get(2);
-    EXPECT_EQ(ans, 5);
+    EXPECT_EQ(ans, 6);
 }
