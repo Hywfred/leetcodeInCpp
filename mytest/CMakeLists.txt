@@ -29,6 +29,12 @@ set(longest_palindrome_src LongestPalindrome-test.cpp)
 set(construct_binarytree_i_src construct_binarytree_i_test.cc)
 set(minimum_window_substring_src minimum_window_substring_test.cc)
 set(lru_cache_src lru_cache_test.cc)
+set(find_dup_src find_dup_test.cc)
+
+# find duplicate nums
+add_executable(find_dup ${find_dup_src})
+add_test( find_dup find_dup)
+target_link_libraries(find_dup daily "gtest" "gtest_main")
 
 # construct binary tree from preorder and inorder traversal
 add_executable(lru_cache ${lru_cache_src})
