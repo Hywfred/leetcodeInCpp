@@ -128,11 +128,14 @@ class Solution {
     // 最小覆盖子串 20.05.23
     std::string minWindow(std::string s, std::string t);
 
-    // 寻找重复数 20.05.27
+    // 寻找重复数 20.05.26
     int findDuplicate(std::vector<int> &nums);
 
-    // 和可被 K 整除的子数组
+    // 和可被 K 整除的子数组 20.05.27
     int subarraysDivByK(std::vector<int> &A, int K);
+
+    // 字符串解码 20.05.28
+    std::string decodeString(std::string s);
 
   private:
     long pre;

@@ -8,10 +8,16 @@ link_directories(${CMAKE_SOURCE_DIR}/lib)
 # add_test(NAME mytest COMMAND mytest)
 
 # sum of subarray divisible by k
-set(subarr_divby_k_src subarr_divby_k_test.cc)
-add_executable(subarr_divby_k ${subarr_divby_k_src})
-add_test( subarr_divby_k subarr_divby_k)
-target_link_libraries(subarr_divby_k daily "gtest" "gtest_main")
+set(doced_string_src decode_string_test.cc)
+add_executable(decode_string ${doced_string_src})
+add_test( decode_string decode_string)
+target_link_libraries(decode_string daily "gtest" "gtest_main")
+
+# # sum of subarray divisible by k
+# set(subarr_divby_k_src subarr_divby_k_test.cc)
+# add_executable(subarr_divby_k ${subarr_divby_k_src})
+# add_test( subarr_divby_k subarr_divby_k)
+# target_link_libraries(subarr_divby_k daily "gtest" "gtest_main")
 
 # set(longest_sub_str LongestSubStr-test.cpp)
 # set(max_sub_arr MaximumSubArr-test.cpp)
