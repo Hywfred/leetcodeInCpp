@@ -3,9 +3,11 @@
 #define _DAILY_H
 
 #include <climits>
+#include <list>
 #include <set>
 #include <stack>
 #include <string>
+#include <unordered_map>
 #include <vector>
 
 #include "ListNode.h"
@@ -128,6 +130,17 @@ class Solution {
 
     // 寻找两个正序数组的中位数
     double findMedianSortedArrays(std::vector<int> &nums1, std::vector<int> &nums2);
+    // 寻找重复数 20.05.26
+    int findDuplicate(std::vector<int> &nums);
+
+    // 和可被 K 整除的子数组 20.05.27
+    int subarraysDivByK(std::vector<int> &A, int K);
+
+    // 字符串解码 20.05.28
+    std::string decodeString(std::string s);
+
+    // 打家劫舍 20.05.29
+    int rob(std::vector<int> &nums);
 
   private:
     long pre;
@@ -152,6 +165,26 @@ class MinStack {
   private:
     std::stack<int> m_data;
     std::multiset<int> order;
+};
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * LRUCache* obj = new LRUCache(capacity);
+ * int param_1 = obj->get(key);
+ * obj->put(key,value);
+ */
+class LRUCache {
+  public:
+    using val_iter_type = std::list<std::pair<int, int>>::iterator;
+    LRUCache(int capacity);
+
+    int get(int key);
+
+    void put(int key, int value);
+
+    std::unordered_map<int, val_iter_type> kvs_;
+    std::list<std::pair<int, int>> nodes_;
+    int cap_;
 };
 
 #endif  // _DAILY_H
