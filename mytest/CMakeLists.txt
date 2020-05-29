@@ -7,11 +7,17 @@ link_directories(${CMAKE_SOURCE_DIR}/lib)
 # add test
 # add_test(NAME mytest COMMAND mytest)
 
-# sum of subarray divisible by k
-set(doced_string_src decode_string_test.cc)
-add_executable(decode_string ${doced_string_src})
-add_test( decode_string decode_string)
-target_link_libraries(decode_string daily "gtest" "gtest_main")
+# house robber
+set(rob_src rob_test.cc)
+add_executable(rob ${rob_src})
+add_test( rob rob)
+target_link_libraries(rob daily "gtest" "gtest_main")
+
+# # sum of subarray divisible by k
+# set(doced_string_src decode_string_test.cc)
+# add_executable(decode_string ${doced_string_src})
+# add_test( decode_string decode_string)
+# target_link_libraries(decode_string daily "gtest" "gtest_main")
 
 # # sum of subarray divisible by k
 # set(subarr_divby_k_src subarr_divby_k_test.cc)

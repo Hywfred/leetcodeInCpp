@@ -137,6 +137,9 @@ class Solution {
     // 字符串解码 20.05.28
     std::string decodeString(std::string s);
 
+    // 打家劫舍 20.05.29
+    int rob(std::vector<int> &nums);
+
   private:
     long pre;
 };
