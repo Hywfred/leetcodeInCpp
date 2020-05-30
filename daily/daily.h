@@ -142,6 +142,9 @@ class Solution {
     // 打家劫舍 20.05.29
     int rob(std::vector<int> &nums);
 
+    // 柱状图中最大的矩形面积 20.05.30
+    int largestRectangleArea(std::vector<int> &heights);
+
   private:
     long pre;
 };
