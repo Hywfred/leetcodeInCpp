@@ -145,6 +145,10 @@ class Solution {
     // 柱状图中最大的矩形面积 20.05.30
     int largestRectangleArea(std::vector<int> &heights);
 
+    // 对称二叉树 20.05.31
+    bool isSymmetric(TreeNode *root);
+    bool iter_symmetric(TreeNode *root);
+
   private:
     long pre;
 };
