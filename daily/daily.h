@@ -149,6 +149,9 @@ class Solution {
     bool isSymmetric(TreeNode *root);
     bool iter_symmetric(TreeNode *root);
 
+    // 拥有最多糖果的孩子 20.06.01
+    std::vector<bool> kidsWithCandies(std::vector<int> &candies, int extraCandies);
+
   private:
     long pre;
 };
