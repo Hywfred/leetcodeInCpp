@@ -152,6 +152,11 @@ class Solution {
     // 拥有最多糖果的孩子 20.06.01
     std::vector<bool> kidsWithCandies(std::vector<int> &candies, int extraCandies);
 
+    // 求 1+2+...+n 20.0.02
+    int sumNums(int n);
+    int sumNums1(int n);
+    int sumNums2(int n);
+
   private:
     long pre;
 };
