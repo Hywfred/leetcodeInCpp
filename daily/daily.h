@@ -157,6 +157,9 @@ class Solution {
     int sumNums1(int n);
     int sumNums2(int n);
 
+    // 新 21 点 20.06.03
+    double new21Game(int N, int K, int W);
+
   private:
     long pre;
 };
