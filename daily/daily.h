@@ -160,6 +160,9 @@ class Solution {
     // 新 21 点 20.06.03
     double new21Game(int N, int K, int W);
 
+    // 除自身以外数组的乘积 20.06.04
+    std::vector<int> productExceptSelf(std::vector<int> &nums);
+
   private:
     long pre;
 };

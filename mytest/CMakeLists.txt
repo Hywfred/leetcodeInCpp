@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(new_21 new_21_test.cc)
-target_link_libraries(new_21 daily "gtest" "gtest_main")
-add_test(NAME new_21 COMMAND new_21)
+add_executable(product_except_self product_except_self_test.cc)
+target_link_libraries(product_except_self daily "gtest" "gtest_main")
+add_test(NAME product_except_self COMMAND product_except_self)
+
+# add_executable(new_21 new_21_test.cc)
+# target_link_libraries(new_21 daily "gtest" "gtest_main")
+# add_test(NAME new_21 COMMAND new_21)
 
 # add_executable(sum1_n sum1_n_test.cc)
 # target_link_libraries(sum1_n daily "gtest" "gtest_main")
