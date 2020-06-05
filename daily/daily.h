@@ -163,6 +163,9 @@ class Solution {
     // 除自身以外数组的乘积 20.06.04
     std::vector<int> productExceptSelf(std::vector<int> &nums);
 
+    // 顺时针打印矩阵 20.06.05
+    std::vector<int> spiralOrder(std::vector<std::vector<int>> &matrix);
+
   private:
     long pre;
 };
