@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(spiral_order spiral_order_test.cc)
-target_link_libraries(spiral_order daily "gtest" "gtest_main")
-add_test(NAME spiral_order COMMAND spiral_order)
+add_executable(longest_consecutive longest_consecutive_test.cc)
+target_link_libraries(longest_consecutive daily "gtest" "gtest_main")
+add_test(NAME spiral_order COMMAND longest_consecutive)
+
+# add_executable(spiral_order spiral_order_test.cc)
+# target_link_libraries(spiral_order daily "gtest" "gtest_main")
+# add_test(NAME spiral_order COMMAND spiral_order)
 
 # add_executable(product_except_self product_except_self_test.cc)
 # target_link_libraries(product_except_self daily "gtest" "gtest_main")

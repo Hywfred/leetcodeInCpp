@@ -166,6 +166,9 @@ class Solution {
     // 顺时针打印矩阵 20.06.05
     std::vector<int> spiralOrder(std::vector<std::vector<int>> &matrix);
 
+    // 最长连续序列 20.06.06
+    int longestConsecutive(std::vector<int> &nums);
+
   private:
     long pre;
 };
