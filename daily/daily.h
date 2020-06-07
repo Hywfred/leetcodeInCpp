@@ -8,6 +8,7 @@
 #include <stack>
 #include <string>
 #include <unordered_map>
+#include <unordered_set>
 #include <vector>
 
 #include "ListNode.h"
@@ -169,11 +170,82 @@ class Solution {
     // 最长连续序列 20.06.06
     int longestConsecutive(std::vector<int> &nums);
 
+    // 单词接龙II 20.06.07
+    std::vector<std::vector<std::string>> findLadders(std::string beginWord, std::string endWord,
+                                                      std::vector<std::string> &wordList);
+
   private:
     long pre;
 };
 
 int findMountainTop(MountainArray &m);
+
+// 单词接龙II 题解
+//用记忆来培养思维，而不是单纯记忆。
+//讲东西时先抛开代码讲整体思路，然后再具体到代码讲细节。
+//双端BFS构建整颗最短树，DFS找最短树中beginWord到endWord的路径，因为最短树层数就那么多，所以找到的路径一定是最短的。
+//当beginSet中的一个单词在endSet中出现时，说明双端搜索相遇了。
+//用双端搜索而不是单端，是因为双端更省时。
+class Solution1 {
+  private:
+    std::vector<std::vector<std::string>> res;
+    std::unordered_map<std::string, std::vector<std::string>> map;
+    //用unordered_map是因为查找key的时间复杂度O(1),找到了key，对应的value就是树的下一层了。(vector<vector<string>>的查找就太慢了)，用map的key来存储原string,用value来存储原string所有的下一层string(wordSet中所有的只与原string相差一个字符的word)
+  public:
+    std::vector<std::vector<std::string>> findLadders(std::string beginWord, std::string endWord,
+                                                      std::vector<std::string> &wordList) {
+        // BFS把找最短序列过程中的每一层的erase后的wordSet中的word们都统计出，包括相遇的那层的word们。然后用dfs去搜索
+        //最短序列，因为只统计到相遇那一层，层数就那么多，所以dfs找到的序列层数一定是那么多，所以一定是最短序列。
+        std::unordered_set<std::string> wordSet{wordList.begin(), wordList.end()};
+        if (!wordSet.count(endWord)) return res;
+        std::unordered_set<std::string> beginSet{beginWord};
+        std::unordered_set<std::string> endSet{endWord};
+        int flag1 = 0, flag2 = 0;  // flag1标记是否已经双端搜索相遇了
+        while (!beginSet.empty()) {
+            std::unordered_set<std::string> next;
+            for (std::string word : beginSet) {  //单独建个循环统一删除
+                wordSet.erase(word);
+            }
+            for (std::string word : beginSet) {
+                for (int w = 0; w < word.size(); ++w) {
+                    std::string tmp = word;
+                    for (int i = 'a'; i <= 'z'; ++i) {
+                        tmp[w] = i;
+                        if (!wordSet.count(tmp)) continue;
+                        if (!endSet.count(tmp))
+                            next.emplace(tmp);
+                        else
+                            flag1 = 1;  // flag1 = 1，双端set搜索相遇了，在添加完这一整层的word后退出循环。
+                        flag2 ? map[tmp].emplace_back(word) : map[word].emplace_back(tmp);
+                    }
+                }
+            }
+            if (flag1) break;
+            beginSet = next;
+            if (beginSet.size() > endSet.size()) {
+                swap(beginSet, endSet);
+                flag2 = !flag2;  //搜索方向取反，所以flag2标志也要取反，这样子构建的树是从上到下顺序构造的。
+            }
+        }
+        std::vector<std::string> vec{beginWord};
+        dfs(vec, beginWord, endWord);
+        return res;
+    }
+
+    void dfs(std::vector<std::string> &vec, std::string beginWord, std::string endWord) {
+        if (beginWord == endWord) {
+            res.push_back(vec);
+            return;
+        }
+        if (!map.count(beginWord)) return;
+        //对于BFS出的哈希表，单层交给迭代，整棵树交给递归
+        for (auto &temp : map[beginWord]) {
+            vec.emplace_back(temp);
+            dfs(vec, temp, endWord);
+            vec.pop_back();
+        }
+    }
+};
 
 // 最小栈 20.05.12
 class MinStack {
