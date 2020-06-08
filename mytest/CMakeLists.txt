@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(find_ladders find_ladders_test.cc)
-target_link_libraries(find_ladders daily "gtest" "gtest_main")
-add_test(NAME find_ladders COMMAND find_ladders)
+add_executable(equations_possible equations_possible_test.cc)
+target_link_libraries(equations_possible daily "gtest" "gtest_main")
+add_test(NAME equations_possible COMMAND equations_possible)
+
+# add_executable(find_ladders find_ladders_test.cc)
+# target_link_libraries(find_ladders daily "gtest" "gtest_main")
+# add_test(NAME find_ladders COMMAND find_ladders)
 
 # add_executable(longest_consecutive longest_consecutive_test.cc)
 # target_link_libraries(longest_consecutive daily "gtest" "gtest_main")

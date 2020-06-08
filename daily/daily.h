@@ -174,6 +174,9 @@ class Solution {
     std::vector<std::vector<std::string>> findLadders(std::string beginWord, std::string endWord,
                                                       std::vector<std::string> &wordList);
 
+    // 等式方程的可满足性 20.06.08
+    bool equationsPossible(std::vector<std::string> &equations);
+
   private:
     long pre;
 };
