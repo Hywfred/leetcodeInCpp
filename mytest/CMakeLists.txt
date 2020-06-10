@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(translate_num translate_num_test.cc)
-target_link_libraries(translate_num daily "gtest" "gtest_main")
-add_test(NAME translate_num COMMAND translate_num)
+add_executable(palindrome_num palindrome_num_test.cc)
+target_link_libraries(palindrome_num daily "gtest" "gtest_main")
+add_test(NAME palindrome_num COMMAND translate_num)
+
+# add_executable(translate_num translate_num_test.cc)
+# target_link_libraries(translate_num daily "gtest" "gtest_main")
+# add_test(NAME translate_num COMMAND translate_num)
 
 # add_executable(equations_possible equations_possible_test.cc)
 # target_link_libraries(equations_possible daily "gtest" "gtest_main")

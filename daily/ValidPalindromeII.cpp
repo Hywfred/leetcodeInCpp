@@ -18,7 +18,7 @@ using namespace std;
  * 优化版本
  */
 
-bool isPalindrome(const string &s, decltype(s.size()) first, decltype(s.size()) last) {
+bool isPalindrome_(const string &s, decltype(s.size()) first, decltype(s.size()) last) {
     if (first >= last) return true;
     while (first < last) {
         if (s.at(first) != s.at(last)) return false;
@@ -29,7 +29,7 @@ bool isPalindrome(const string &s, decltype(s.size()) first, decltype(s.size()) 
 
 bool Solution::validPalindrome(string s) {
     for (decltype(s.size()) i = 0, j = s.size() - 1; i < j; ++i, --j)
-        if (s.at(i) != s.at(j)) return isPalindrome(s, i + 1, j) || isPalindrome(s, i, j - 1);
+        if (s.at(i) != s.at(j)) return isPalindrome_(s, i + 1, j) || isPalindrome_(s, i, j - 1);
     return true;
 }
 

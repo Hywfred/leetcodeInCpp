@@ -180,6 +180,9 @@ class Solution {
     // 把数字翻译成字符串
     int translateNum(int num);
 
+    // 回文数
+    bool isPalindrome(int x);
+
   private:
     long pre;
 };
