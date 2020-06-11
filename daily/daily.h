@@ -177,11 +177,14 @@ class Solution {
     // 等式方程的可满足性 20.06.08
     bool equationsPossible(std::vector<std::string> &equations);
 
-    // 把数字翻译成字符串
+    // 把数字翻译成字符串 20.06.09
     int translateNum(int num);
 
-    // 回文数
+    // 回文数 20.06.10
     bool isPalindrome(int x);
+
+    // 每日温度 20.06.11
+    std::vector<int> dailyTemperatures(std::vector<int> &T);
 
   private:
     long pre;
