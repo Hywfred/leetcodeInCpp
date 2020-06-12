@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(daily_temperature daily_temperature_test.cc)
-target_link_libraries(daily_temperature daily "gtest" "gtest_main")
-add_test(NAME daily_temperature COMMAND daily_temperature)
+add_executable(three_sum three_sum_test.cc)
+target_link_libraries(three_sum daily "gtest" "gtest_main")
+add_test(NAME three_sum COMMAND three_sum)
+
+# add_executable(daily_temperature daily_temperature_test.cc)
+# target_link_libraries(daily_temperature daily "gtest" "gtest_main")
+# add_test(NAME daily_temperature COMMAND daily_temperature)
 
 # add_executable(palindrome_num palindrome_num_test.cc)
 # target_link_libraries(palindrome_num daily "gtest" "gtest_main")

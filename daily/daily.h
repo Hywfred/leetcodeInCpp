@@ -186,6 +186,9 @@ class Solution {
     // 每日温度 20.06.11
     std::vector<int> dailyTemperatures(std::vector<int> &T);
 
+    // 三数之和 20.06.12
+    std::vector<std::vector<int>> threeSum(std::vector<int> &nums);
+
   private:
     long pre;
 };
