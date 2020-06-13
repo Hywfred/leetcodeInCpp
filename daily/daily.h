@@ -189,6 +189,9 @@ class Solution {
     // 三数之和 20.06.12
     std::vector<std::vector<int>> threeSum(std::vector<int> &nums);
 
+    // 怕楼梯 20.06.13
+    int climbStairs(int n);
+
   private:
     long pre;
 };
