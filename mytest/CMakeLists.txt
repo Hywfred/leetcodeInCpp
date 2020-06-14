@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(climb_stairs climb_stairs_test.cc)
-target_link_libraries(climb_stairs daily "gtest" "gtest_main")
-add_test(NAME climb_stairs COMMAND climb_stairs)
+add_executable(find_best_value find_best_value_test.cc)
+target_link_libraries(find_best_value daily "gtest" "gtest_main")
+add_test(NAME find_best_value COMMAND find_best_value)
+
+# add_executable(climb_stairs climb_stairs_test.cc)
+# target_link_libraries(climb_stairs daily "gtest" "gtest_main")
+# add_test(NAME climb_stairs COMMAND climb_stairs)
 
 # add_executable(three_sum three_sum_test.cc)
 # target_link_libraries(three_sum daily "gtest" "gtest_main")

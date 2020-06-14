@@ -192,6 +192,9 @@ class Solution {
     // 怕楼梯 20.06.13
     int climbStairs(int n);
 
+    // 转变数组后最接近目标值的数组和
+    int findBestValue(std::vector<int> &arr, int target);
+
   private:
     long pre;
 };
