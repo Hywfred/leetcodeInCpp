@@ -195,6 +195,9 @@ class Solution {
     // 转变数组后最接近目标值的数组和
     int findBestValue(std::vector<int> &arr, int target);
 
+    // 最长公共前缀
+    std::string longestCommonPrefix(std::vector<std::string> &strs);
+
   private:
     long pre;
 };

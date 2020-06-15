@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(find_best_value find_best_value_test.cc)
-target_link_libraries(find_best_value daily "gtest" "gtest_main")
-add_test(NAME find_best_value COMMAND find_best_value)
+add_executable(longest_common_prefix longest_common_prefix_test.cc)
+target_link_libraries(longest_common_prefix daily "gtest" "gtest_main")
+add_test(NAME longest_common_prefix COMMAND longest_common_prefix)
+
+# add_executable(find_best_value find_best_value_test.cc)
+# target_link_libraries(find_best_value daily "gtest" "gtest_main")
+# add_test(NAME find_best_value COMMAND find_best_value)
 
 # add_executable(climb_stairs climb_stairs_test.cc)
 # target_link_libraries(climb_stairs daily "gtest" "gtest_main")
