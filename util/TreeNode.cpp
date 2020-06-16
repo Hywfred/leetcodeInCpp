@@ -2,37 +2,50 @@
 
 using namespace std;
 
-// ¸ù¾ÝÊý×é¹¹½¨¶þ²æÊ÷
-TreeNode *GenerateBT(vector<int> &arr, int start) {
-    if (arr.empty() || start >= arr.size()) {
-        return nullptr;
-    }
-    if (arr[start] == INT_MAX) {
-        return nullptr;
-    }
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+TreeNode *GenerateBT(vector<int> &arr) {
+    if (arr.empty()) return nullptr;
+    queue<TreeNode *> nodes;
+    int idx = 0;
+    TreeNode *root = new TreeNode(arr[idx]);
+    nodes.push(root);
 
-    TreeNode *root = new TreeNode(arr.at(start));
-    root->left = GenerateBT(arr, 2 * start + 1);
-    root->right = GenerateBT(arr, 2 * start + 2);
-	return root;
+    while (!nodes.empty()) {
+        auto node = nodes.front();
+        nodes.pop();
+        if (++idx >= arr.size()) break;
+        if (!node) continue;
+        // left
+        auto next = arr[idx];
+        if (next != INT_MAX) {
+            TreeNode *left = new TreeNode(next);
+            node->left = left;
+            nodes.push(left);
+        }
+        // right
+        if (++idx >= arr.size()) break;
+        next = arr[idx];
+        if (next != INT_MAX) {
+            TreeNode *right = new TreeNode(next);
+            node->right = right;
+            nodes.push(right);
+        }
+    }
+    return root;
 }
 
-// Ç°Ðò±éÀú
+// Ç°ï¿½ï¿½ï¿½ï¿½ï¿½
 void PreorderTraversal(TreeNode *root) {
-	if (!root) {
-		return;
-	}
-	cout << root->val << " ";
-	PreorderTraversal(root->left);
-	PreorderTraversal(root->right);
+    if (!root) { return; }
+    cout << root->val << " ";
+    PreorderTraversal(root->left);
+    PreorderTraversal(root->right);
 }
 
-// ÖÐÐò±éÀú
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 void InorderTraversal(TreeNode *root) {
-	if (!root) {
-		return;
-	}
-	InorderTraversal(root->left);
-	cout << root->val << " ";
-	InorderTraversal(root->right);
+    if (!root) { return; }
+    InorderTraversal(root->left);
+    cout << root->val << " ";
+    InorderTraversal(root->right);
 }

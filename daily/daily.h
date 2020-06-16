@@ -189,17 +189,31 @@ class Solution {
     // 三数之和 20.06.12
     std::vector<std::vector<int>> threeSum(std::vector<int> &nums);
 
-    // 怕楼梯 20.06.13
+    // 爬楼梯 20.06.13
     int climbStairs(int n);
 
-    // 转变数组后最接近目标值的数组和
+    // 转变数组后最接近目标值的数组和 20.06.14
     int findBestValue(std::vector<int> &arr, int target);
 
-    // 最长公共前缀
+    // 最长公共前缀 20.06.14
     std::string longestCommonPrefix(std::vector<std::string> &strs);
+
+    // 二叉树的序列化与反序列化 20.06.16
 
   private:
     long pre;
+};
+
+// Your Codec object will be instantiated and called as such:
+// Codec codec;
+// codec.deserialize(codec.serialize(root));
+class Codec {
+  public:
+    // Encodes a tree to a single string.
+    std::string serialize(TreeNode *root);
+
+    // Decodes your encoded data to tree.
+    TreeNode *deserialize(std::string data);
 };
 
 int findMountainTop(MountainArray &m);

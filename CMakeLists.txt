@@ -12,3 +12,5 @@ include_directories(includes daily util)
 add_subdirectory(daily)
 add_subdirectory(util)
 add_subdirectory(mytest)
+
+add_executable(main main.cpp)
