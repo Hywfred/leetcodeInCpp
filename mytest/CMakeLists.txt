@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(serialize_deserialize_binarytree serialize_deserialize_binarytree_test.cc)
-target_link_libraries(serialize_deserialize_binarytree daily "gtest" "gtest_main")
-add_test(NAME serialize_deserialize_binarytree COMMAND serialize_deserialize_binarytree)
+add_executable(max_score max_score_sightseeing_pair_test.cc)
+target_link_libraries(max_score daily "gtest" "gtest_main")
+add_test(NAME max_score COMMAND max_score)
+
+# add_executable(serialize_deserialize_binarytree serialize_deserialize_binarytree_test.cc)
+# target_link_libraries(serialize_deserialize_binarytree daily "gtest" "gtest_main")
+# add_test(NAME serialize_deserialize_binarytree COMMAND serialize_deserialize_binarytree)
 
 # add_executable(longest_common_prefix longest_common_prefix_test.cc)
 # target_link_libraries(longest_common_prefix daily "gtest" "gtest_main")

@@ -200,6 +200,9 @@ class Solution {
 
     // 二叉树的序列化与反序列化 20.06.16
 
+    // 最佳观光组合 20.06.17
+    int maxScoreSightseeingPair(std::vector<int> &A);
+
   private:
     long pre;
 };
