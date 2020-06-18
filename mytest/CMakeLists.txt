@@ -4,9 +4,18 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(max_score max_score_sightseeing_pair_test.cc)
-target_link_libraries(max_score daily "gtest" "gtest_main")
-add_test(NAME max_score COMMAND max_score)
+add_executable(recover_from_preorder recover_from_preorder_test.cc)
+target_link_libraries(recover_from_preorder daily "gtest" "gtest_main")
+add_test(NAME recover_from_preorder COMMAND recover_from_preorder)
+
+# add_executable(treenode_test treenode_test.cc)
+# target_link_libraries(treenode_test daily "gtest" "gtest_main")
+# add_test(NAME treenode_test COMMAND treenode_test)
+
+
+# add_executable(max_score max_score_sightseeing_pair_test.cc)
+# target_link_libraries(max_score daily "gtest" "gtest_main")
+# add_test(NAME max_score COMMAND max_score)
 
 # add_executable(serialize_deserialize_binarytree serialize_deserialize_binarytree_test.cc)
 # target_link_libraries(serialize_deserialize_binarytree daily "gtest" "gtest_main")

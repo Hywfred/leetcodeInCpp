@@ -1,5 +1,7 @@
 #include "TreeNode.h"
 
+#include <queue>
+
 using namespace std;
 
 // �������鹹��������
@@ -48,4 +50,24 @@ void InorderTraversal(TreeNode *root) {
     InorderTraversal(root->left);
     cout << root->val << " ";
     InorderTraversal(root->right);
+}
+
+// 层序遍历
+void LevelTraversal(TreeNode *root) {
+    if (!root) return;
+    queue<TreeNode *> nodes;
+    nodes.push(root);
+    while (!nodes.empty()) {
+        auto node = nodes.front();
+        nodes.pop();
+        // 如果 node 为空
+        if (!node) {
+            cout << "null,";
+            continue;
+        } else {
+            cout << node->val << ",";
+        }
+        nodes.push(node->left);
+        nodes.push(node->right);
+    }
 }

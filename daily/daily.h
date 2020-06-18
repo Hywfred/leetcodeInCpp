@@ -203,6 +203,9 @@ class Solution {
     // 最佳观光组合 20.06.17
     int maxScoreSightseeingPair(std::vector<int> &A);
 
+    // 从先序遍历还原二叉树
+    TreeNode *recoverFromPreorder(std::string S);
+
   private:
     long pre;
 };

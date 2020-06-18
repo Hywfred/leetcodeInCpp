@@ -26,4 +26,7 @@ void PreorderTraversal(TreeNode *root);
 // 中序遍历
 void InorderTraversal(TreeNode *root);
 
+// 层序遍历
+void LevelTraversal(TreeNode *root);
+
 #endif  // LEETCODEINCPP_TREENODE_H
