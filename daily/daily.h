@@ -203,8 +203,11 @@ class Solution {
     // 最佳观光组合 20.06.17
     int maxScoreSightseeingPair(std::vector<int> &A);
 
-    // 从先序遍历还原二叉树
+    // 从先序遍历还原二叉树 20.06.18
     TreeNode *recoverFromPreorder(std::string S);
+
+    // 验证回文串 20.06.19
+    bool isPalindrome(std::string s);
 
   private:
     long pre;

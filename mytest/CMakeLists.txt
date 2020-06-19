@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(recover_from_preorder recover_from_preorder_test.cc)
-target_link_libraries(recover_from_preorder daily "gtest" "gtest_main")
-add_test(NAME recover_from_preorder COMMAND recover_from_preorder)
+add_executable(is_palindrome is_palindrome_test.cc)
+target_link_libraries(is_palindrome daily "gtest" "gtest_main")
+add_test(NAME is_palindrome COMMAND is_palindrome)
+
+# add_executable(recover_from_preorder recover_from_preorder_test.cc)
+# target_link_libraries(recover_from_preorder daily "gtest" "gtest_main")
+# add_test(NAME recover_from_preorder COMMAND recover_from_preorder)
 
 # add_executable(treenode_test treenode_test.cc)
 # target_link_libraries(treenode_test daily "gtest" "gtest_main")
