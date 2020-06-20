@@ -209,6 +209,9 @@ class Solution {
     // 验证回文串 20.06.19
     bool isPalindrome(std::string s);
 
+    // 正则表达式匹配 20.06.20
+    bool isMatch(std::string s, std::string p);
+
   private:
     long pre;
 };

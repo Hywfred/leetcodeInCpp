@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(is_palindrome is_palindrome_test.cc)
-target_link_libraries(is_palindrome daily "gtest" "gtest_main")
-add_test(NAME is_palindrome COMMAND is_palindrome)
+add_executable(is_match is_match_test.cc)
+target_link_libraries(is_match daily "gtest" "gtest_main")
+add_test(NAME is_match COMMAND is_match)
+
+# add_executable(is_palindrome is_palindrome_test.cc)
+# target_link_libraries(is_palindrome daily "gtest" "gtest_main")
+# add_test(NAME is_palindrome COMMAND is_palindrome)
 
 # add_executable(recover_from_preorder recover_from_preorder_test.cc)
 # target_link_libraries(recover_from_preorder daily "gtest" "gtest_main")
