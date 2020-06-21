@@ -4,9 +4,17 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(is_match is_match_test.cc)
-target_link_libraries(is_match daily "gtest" "gtest_main")
-add_test(NAME is_match COMMAND is_match)
+add_executable(max_path max_path_test.cc)
+target_link_libraries(max_path daily weekly "gtest" "gtest_main")
+add_test(NAME max_path COMMAND max_path)
+
+# add_executable(file_uni filenames_unique_test.cc)
+# target_link_libraries(file_uni daily weekly "gtest" "gtest_main")
+# add_test(NAME file_uni COMMAND file_uni)
+
+# add_executable(is_match is_match_test.cc)
+# target_link_libraries(is_match daily "gtest" "gtest_main")
+# add_test(NAME is_match COMMAND is_match)
 
 # add_executable(is_palindrome is_palindrome_test.cc)
 # target_link_libraries(is_palindrome daily "gtest" "gtest_main")
