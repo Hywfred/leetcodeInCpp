@@ -212,8 +212,11 @@ class Solution {
     // 正则表达式匹配 20.06.20
     bool isMatch(std::string s, std::string p);
 
-    // 二叉树中的最大路径和
+    // 二叉树中的最大路径和 20.06.21
     int maxPathSum(TreeNode *root);
+
+    // 模式匹配 20.06.22
+    bool patternMatching(std::string pattern, std::string value);
 
   private:
     long pre;
