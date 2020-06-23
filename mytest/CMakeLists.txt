@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(pattern_matching pattern_matching_test.cc)
-target_link_libraries(pattern_matching daily "gtest" "gtest_main")
-add_test(NAME pattern_matching COMMAND pattern_matching)
+add_executable(add_binary add_binary_test.cc)
+target_link_libraries(add_binary daily "gtest" "gtest_main")
+add_test(NAME add_binary COMMAND add_binary)
+
+# add_executable(pattern_matching pattern_matching_test.cc)
+# target_link_libraries(pattern_matching daily "gtest" "gtest_main")
+# add_test(NAME pattern_matching COMMAND pattern_matching)
 
 # add_executable(max_path max_path_test.cc)
 # target_link_libraries(max_path daily weekly "gtest" "gtest_main")

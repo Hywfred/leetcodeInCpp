@@ -218,6 +218,9 @@ class Solution {
     // 模式匹配 20.06.22
     bool patternMatching(std::string pattern, std::string value);
 
+    // 二进制求和
+    std::string addBinary(std::string a, std::string b);
+
   private:
     long pre;
 };
