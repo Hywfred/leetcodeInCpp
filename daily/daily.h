@@ -218,8 +218,11 @@ class Solution {
     // 模式匹配 20.06.22
     bool patternMatching(std::string pattern, std::string value);
 
-    // 二进制求和
+    // 二进制求和 20.06.23
     std::string addBinary(std::string a, std::string b);
+
+    // 最接近的三数之和 20.06.24
+    int threeSumClosest(std::vector<int> &nums, int target);
 
   private:
     long pre;
