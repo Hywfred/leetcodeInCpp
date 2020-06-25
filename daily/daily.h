@@ -224,6 +224,9 @@ class Solution {
     // 最接近的三数之和 20.06.24
     int threeSumClosest(std::vector<int> &nums, int target);
 
+    // 单词拆分 20.06.25
+    bool wordBreak(std::string s, std::vector<std::string> &wordDict);
+
   private:
     long pre;
 };

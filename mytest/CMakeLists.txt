@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(three_sum_closest three_sum_closest_test.cc)
-target_link_libraries(three_sum_closest daily "gtest" "gtest_main")
-add_test(NAME three_sum_closest COMMAND three_sum_closest)
+add_executable(word_break word_break_test.cc)
+target_link_libraries(word_break daily "gtest" "gtest_main")
+add_test(NAME word_break COMMAND word_break)
+
+# add_executable(three_sum_closest three_sum_closest_test.cc)
+# target_link_libraries(three_sum_closest daily "gtest" "gtest_main")
+# add_test(NAME three_sum_closest COMMAND three_sum_closest)
 
 # add_executable(add_binary add_binary_test.cc)
 # target_link_libraries(add_binary daily "gtest" "gtest_main")
