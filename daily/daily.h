@@ -227,6 +227,9 @@ class Solution {
     // 单词拆分 20.06.25
     bool wordBreak(std::string s, std::vector<std::string> &wordDict);
 
+    // 移除重复节点
+    ListNode *removeDuplicateNodes(ListNode *head);
+
   private:
     long pre;
 };
