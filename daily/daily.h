@@ -230,6 +230,9 @@ class Solution {
     // 移除重复节点
     ListNode *removeDuplicateNodes(ListNode *head);
 
+    // 缺失的第一个正数 20.06.27
+    int firstMissingPositive(std::vector<int> &nums);
+
   private:
     long pre;
 };
