@@ -233,6 +233,9 @@ class Solution {
     // 缺失的第一个正数 20.06.27
     int firstMissingPositive(std::vector<int> &nums);
 
+    // 长度最小的子数组 20.06.28
+    int minSubArrayLen(int s, std::vector<int> &nums);
+
   private:
     long pre;
 };

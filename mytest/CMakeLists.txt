@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(first_missing_positive first_missing_positive_test.cc)
-target_link_libraries(first_missing_positive daily "gtest" "gtest_main")
-add_test(NAME first_missing_positive COMMAND first_missing_positive)
+add_executable(min_subarray_len min_subarray_len_test.cc)
+target_link_libraries(min_subarray_len daily "gtest" "gtest_main")
+add_test(NAME min_subarray_len COMMAND min_subarray_len)
+
+# add_executable(first_missing_positive first_missing_positive_test.cc)
+# target_link_libraries(first_missing_positive daily "gtest" "gtest_main")
+# add_test(NAME first_missing_positive COMMAND first_missing_positive)
 
 # add_executable(remove_duplicate remove_duplicate_node_test.cc)
 # target_link_libraries(remove_duplicate daily "gtest" "gtest_main")
