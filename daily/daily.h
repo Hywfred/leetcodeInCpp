@@ -236,6 +236,9 @@ class Solution {
     // 长度最小的子数组 20.06.28
     int minSubArrayLen(int s, std::vector<int> &nums);
 
+    // 数组中第 k 个最大元素
+    int findKthLargest(std::vector<int> &nums, int k);
+
   private:
     long pre;
 };
