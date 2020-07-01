@@ -241,6 +241,10 @@ class Solution {
 
     // 用两个栈实现队列 20.06.30
     // 见类 CQueue
+
+    // 最长重复子数组 20.07.01
+    int findLength(std::vector<int> &A, std::vector<int> &B);
+
   private:
     long pre;
 };
@@ -260,8 +264,8 @@ class CQueue {
     }
 
   private:
-    stack<int> in_;
-    stack<int> out_;
+    std::stack<int> in_;
+    std::stack<int> out_;
 
     void trans() {
         while (!in_.empty()) {
