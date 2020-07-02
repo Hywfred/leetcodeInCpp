@@ -245,6 +245,9 @@ class Solution {
     // 最长重复子数组 20.07.01
     int findLength(std::vector<int> &A, std::vector<int> &B);
 
+    // 有序矩阵中第 k 小的元素
+    int kthSmallest(std::vector<std::vector<int>> &matrix, int k);
+
   private:
     long pre;
 };
