@@ -21,7 +21,7 @@ struct TreeNode {
 TreeNode *GenerateBT(std::vector<int> &arr);
 
 // 前序遍历
-void PreorderTraversal(TreeNode *root);
+std::ostream &PreorderTraversal(std::ostream &, TreeNode *root);
 
 // 中序遍历
 void InorderTraversal(TreeNode *root);

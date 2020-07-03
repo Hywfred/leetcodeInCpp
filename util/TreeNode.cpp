@@ -37,11 +37,12 @@ TreeNode *GenerateBT(vector<int> &arr) {
 }
 
 // ǰ�����
-void PreorderTraversal(TreeNode *root) {
-    if (!root) { return; }
-    cout << root->val << " ";
-    PreorderTraversal(root->left);
-    PreorderTraversal(root->right);
+ostream &PreorderTraversal(ostream &os, TreeNode *root) {
+    if (!root) { return os; }
+    os << root->val << " ";
+    PreorderTraversal(os, root->left);
+    PreorderTraversal(os, root->right);
+    return os;
 }
 
 // �������
