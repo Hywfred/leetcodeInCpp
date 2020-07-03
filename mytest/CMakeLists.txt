@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(kth_smallest kth_smallest_test.cc)
-target_link_libraries(kth_smallest daily "gtest" "gtest_main")
-add_test(NAME kth_smallest COMMAND kth_smallest)
+add_executable(sorted_array_toBST sorted_array_toBST_test.cc)
+target_link_libraries(sorted_array_toBST daily "gtest" "gtest_main")
+add_test(NAME sorted_array_toBST COMMAND sorted_array_toBST)
+
+# add_executable(kth_smallest kth_smallest_test.cc)
+# target_link_libraries(kth_smallest daily "gtest" "gtest_main")
+# add_test(NAME kth_smallest COMMAND kth_smallest)
 
 # add_executable(find_len find_length_test.cc)
 # target_link_libraries(find_len daily "gtest" "gtest_main")

@@ -248,6 +248,9 @@ class Solution {
     // 有序矩阵中第 k 小的元素
     int kthSmallest(std::vector<std::vector<int>> &matrix, int k);
 
+    // 将有序数组转换为二叉搜索树 20.07.03
+    TreeNode *sortedArrayToBST(std::vector<int> &nums);
+
   private:
     long pre;
 };
