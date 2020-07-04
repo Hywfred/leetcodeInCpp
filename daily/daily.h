@@ -251,6 +251,9 @@ class Solution {
     // 将有序数组转换为二叉搜索树 20.07.03
     TreeNode *sortedArrayToBST(std::vector<int> &nums);
 
+    // 最长有效括号 20.07.04
+    int longestValidParentheses(std::string s);
+
   private:
     long pre;
 };
