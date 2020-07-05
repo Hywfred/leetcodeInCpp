@@ -4,9 +4,21 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(sorted_array_toBST sorted_array_toBST_test.cc)
-target_link_libraries(sorted_array_toBST daily "gtest" "gtest_main")
-add_test(NAME sorted_array_toBST COMMAND sorted_array_toBST)
+add_executable(is_match_ii is_match_ii_test.cc)
+target_link_libraries(is_match_ii daily weekly "gtest" "gtest_main")
+add_test(NAME is_match_ii COMMAND is_match_ii)
+
+# add_executable(last_moment get_last_moment_test.cc)
+# target_link_libraries(last_moment daily weekly "gtest" "gtest_main")
+# add_test(NAME last_moment COMMAND last_moment)
+
+# add_executable(arithmetic can_make_arithmetic_progression_test.cc)
+# target_link_libraries(arithmetic daily weekly "gtest" "gtest_main")
+# add_test(NAME arithmetic COMMAND arithmetic)
+
+# add_executable(sorted_array_toBST sorted_array_toBST_test.cc)
+# target_link_libraries(sorted_array_toBST daily "gtest" "gtest_main")
+# add_test(NAME sorted_array_toBST COMMAND sorted_array_toBST)
 
 # add_executable(kth_smallest kth_smallest_test.cc)
 # target_link_libraries(kth_smallest daily "gtest" "gtest_main")

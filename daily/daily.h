@@ -254,6 +254,9 @@ class Solution {
     // 最长有效括号 20.07.04
     int longestValidParentheses(std::string s);
 
+    // 通配符匹配 20.07.05
+    bool isMatchII(std::string s, std::string p);
+
   private:
     long pre;
 };

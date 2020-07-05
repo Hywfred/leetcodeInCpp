@@ -1,17 +1,33 @@
-#include <iostream>
-#include <sstream>
-#include <string>
-
-#include "daily.h"
+#include <stack>
 
 using namespace std;
 
 int main(int argv, char *args[]) {
-    string str;
-    string a = "1,2,3,null,null,4,5";
-    istringstream ss(a);
-    while (getline(ss, str, ',')) { cout << str << endl; }
-    // getline(istringstream("1,2,3,null,null,4,5"), str, ',');
-    cout << str << endl;
+    stack<int> s;
     return 0;
 }
+
+class StackQueue {
+  public:
+    stack<int> in_;
+    stack<int> out_;
+
+    void push(int a) { in_.push(a); }
+
+    void pop() {
+        if (out_.empty())
+            trans();
+        else
+            out_.pop();
+    }
+
+    int front() { return out_.top(); }
+
+    void trans() {
+        while (!in_.empty()) {
+            int top = in_.top();
+            in_.pop();
+            out_.push(top);
+        }
+    }
+};
