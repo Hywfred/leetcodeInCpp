@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(is_match_ii is_match_ii_test.cc)
-target_link_libraries(is_match_ii daily weekly "gtest" "gtest_main")
-add_test(NAME is_match_ii COMMAND is_match_ii)
+add_executable(unique_path unique_path_test.cc)
+target_link_libraries(unique_path daily weekly "gtest" "gtest_main")
+add_test(NAME unique_path COMMAND unique_path)
+
+# add_executable(is_match_ii is_match_ii_test.cc)
+# target_link_libraries(is_match_ii daily weekly "gtest" "gtest_main")
+# add_test(NAME is_match_ii COMMAND is_match_ii)
 
 # add_executable(last_moment get_last_moment_test.cc)
 # target_link_libraries(last_moment daily weekly "gtest" "gtest_main")

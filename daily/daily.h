@@ -257,6 +257,9 @@ class Solution {
     // 通配符匹配 20.07.05
     bool isMatchII(std::string s, std::string p);
 
+    // 不同路径 II 20.07.06
+    int uniquePathsWithObstacles(std::vector<std::vector<int>> &obstacleGrid);
+
   private:
     long pre;
 };
