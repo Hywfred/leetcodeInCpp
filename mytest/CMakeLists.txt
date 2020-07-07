@@ -4,9 +4,17 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(unique_path unique_path_test.cc)
-target_link_libraries(unique_path daily weekly "gtest" "gtest_main")
-add_test(NAME unique_path COMMAND unique_path)
+add_executable(path_sum path_sum_test.cc)
+target_link_libraries(path_sum daily weekly "gtest" "gtest_main")
+add_test(NAME path_sum COMMAND path_sum)
+
+# add_executable(treenode_test treenode_test.cc)
+# target_link_libraries(treenode_test daily weekly "gtest" "gtest_main")
+# add_test(NAME treenode_test COMMAND treenode_test)
+
+# add_executable(unique_path unique_path_test.cc)
+# target_link_libraries(unique_path daily weekly "gtest" "gtest_main")
+# add_test(NAME unique_path COMMAND unique_path)
 
 # add_executable(is_match_ii is_match_ii_test.cc)
 # target_link_libraries(is_match_ii daily weekly "gtest" "gtest_main")
