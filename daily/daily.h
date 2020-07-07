@@ -260,6 +260,9 @@ class Solution {
     // 不同路径 II 20.07.06
     int uniquePathsWithObstacles(std::vector<std::vector<int>> &obstacleGrid);
 
+    // 路径总和 20.07.07
+    bool hasPathSum(TreeNode *root, int sum);
+
   private:
     long pre;
 };
