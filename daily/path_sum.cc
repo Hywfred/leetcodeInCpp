@@ -16,34 +16,35 @@ bool Solution::hasPathSum(TreeNode *root, int sum) {
 }
 
 /**
-//  * 非递归遍历 //TODO
-//  */
-// bool hasPathSun(TreeNode *root, int sum) {
-//     if (!root) return false;
-//     stack<TreeNode *> nodes;
-//     TreeNode *cur = root;
-//     stack<int> vals;  // 记录处理过的值
-//     int curSum = 0;
-//     // 如果二叉树没有遍历完
-//     while (cur || !nodes.empty()) {
-//         while (cur) {
-//             // 访问父节点
-
-//             // 保存右子树
-//             nodes.push(root->right);
-//             // 访问左子树
-//             cur = cur->left;
-//         }
-//         if (!nodes.empty()) {
-//             cur = nodes.top();
-//             nodes.pop();
-//             if (vals.top() == sum && !cur->right) return true;
-//             vals.pop();
-//             cur = cur->right;
-//         }
-//     }
-//     return false;
-// }
+ * 非递归遍历 //TODO
+ */
+bool hasPathSun(TreeNode *root, int sum) {
+    stack<TreeNode *> nodes;
+    stack<int> values;
+    TreeNode *cur = root;
+    int curSum = 0;
+    while (cur || !nodes.empty()) {
+        // 遍历左子树
+        while (cur) {
+            // 父节点入栈
+            nodes.push(cur);
+            curSum += cur->val;
+            values.push(curSum);
+            cur = cur->left;
+        }
+        if (!nodes.empty()) {
+            // 访问根结点
+            cur = nodes.top();
+            nodes.pop();
+            curSum = values.top();
+            values.pop();
+            if (curSum == sum && !cur->left && !cur->right) return true;
+            // 遍历右子树
+            cur = cur->right;
+        }
+    }
+    return false;
+}
 
 /**
  * 非递归遍历一 //TODO
