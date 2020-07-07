@@ -22,6 +22,8 @@ TreeNode *GenerateBT(std::vector<int> &arr);
 
 // 前序遍历
 std::ostream &PreorderTraversal(std::ostream &, TreeNode *root);
+// 非递归前序遍历
+void PreorderTraversal(TreeNode *root, std::vector<int> &ans);
 
 // 中序遍历
 void InorderTraversal(TreeNode *root);

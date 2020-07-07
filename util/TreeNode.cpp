@@ -1,6 +1,7 @@
 #include "TreeNode.h"
 
 #include <queue>
+#include <stack>
 
 using namespace std;
 
@@ -36,13 +37,35 @@ TreeNode *GenerateBT(vector<int> &arr) {
     return root;
 }
 
-// ǰ�����
+// 前序遍历
 ostream &PreorderTraversal(ostream &os, TreeNode *root) {
     if (!root) { return os; }
     os << root->val << " ";
     PreorderTraversal(os, root->left);
     PreorderTraversal(os, root->right);
     return os;
+}
+
+// 非递归前序遍历
+void PreorderTraversal(TreeNode *root, vector<int> &ans) {
+    if (!root) return;
+    stack<TreeNode *> nodes;
+    TreeNode *cur = root;
+    while (cur || !nodes.empty()) {
+        while (cur) {
+            // 访问根结点
+            ans.push_back(cur->val);
+            // 右子树入栈
+            nodes.push(cur->right);
+            // 访问左子树
+            cur = cur->left;
+        }
+        // 访问右子树
+        if (!nodes.empty()) {
+            cur = nodes.top();
+            nodes.pop();
+        }
+    }
 }
 
 // �������
