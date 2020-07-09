@@ -263,6 +263,9 @@ class Solution {
     // 路径总和 20.07.07
     bool hasPathSum(TreeNode *root, int sum);
 
+    // 跳水板 20.07.08
+    std::vector<int> divingBoard(int shorter, int longer, int k);
+
   private:
     long pre;
 };

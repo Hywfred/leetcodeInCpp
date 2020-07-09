@@ -16,7 +16,7 @@ bool Solution::hasPathSum(TreeNode *root, int sum) {
 }
 
 /**
- * 非递归遍历 //TODO
+ * 非递归遍历
  */
 bool hasPathSun(TreeNode *root, int sum) {
     stack<TreeNode *> nodes;
