@@ -266,6 +266,9 @@ class Solution {
     // 跳水板 20.07.08
     std::vector<int> divingBoard(int shorter, int longer, int k);
 
+    // 回复空格 20.07.09
+    int respace(std::vector<std::string> &dictionary, std::string sentence);
+
   private:
     long pre;
 };

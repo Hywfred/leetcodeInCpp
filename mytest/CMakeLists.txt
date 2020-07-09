@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(diving_board diving_board_test.cc)
-target_link_libraries(diving_board daily weekly "gtest" "gtest_main")
-add_test(NAME diving_board COMMAND diving_board)
+add_executable(respace respace_test.cc)
+target_link_libraries(respace daily weekly "gtest" "gtest_main")
+add_test(NAME respace COMMAND respace)
+
+# add_executable(diving_board diving_board_test.cc)
+# target_link_libraries(diving_board daily weekly "gtest" "gtest_main")
+# add_test(NAME diving_board COMMAND diving_board)
 
 # add_executable(path_sum path_sum_test.cc)
 # target_link_libraries(path_sum daily weekly "gtest" "gtest_main")
