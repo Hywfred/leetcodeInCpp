@@ -269,6 +269,9 @@ class Solution {
     // 回复空格 20.07.09
     int respace(std::vector<std::string> &dictionary, std::string sentence);
 
+    // 最佳买卖股票的时机含了冷冻期 20.07.10
+    int maxProfit(std::vector<int> &prices);
+
   private:
     long pre;
 };

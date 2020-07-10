@@ -4,6 +4,10 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
+add_executable(max_profit max_profit_test.cc)
+target_link_libraries(max_profit daily weekly "gtest" "gtest_main")
+add_test(NAME max_profit COMMAND max_profit)
+
 # add_executable(sap sap_test.cc)
 # target_link_libraries(sap daily weekly "gtest" "gtest_main")
 # add_test(NAME sap COMMAND sap)
