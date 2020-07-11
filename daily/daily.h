@@ -272,6 +272,9 @@ class Solution {
     // 最佳买卖股票的时机含了冷冻期 20.07.10
     int maxProfit(std::vector<int> &prices);
 
+    // 计算右侧小于当前元素的个数 20.07.11
+    std::vector<int> countSmaller(std::vector<int> &nums);
+
   private:
     long pre;
 };
