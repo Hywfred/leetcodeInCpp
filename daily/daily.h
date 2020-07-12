@@ -275,6 +275,9 @@ class Solution {
     // 计算右侧小于当前元素的个数 20.07.11
     std::vector<int> countSmaller(std::vector<int> &nums);
 
+    // 地下城游戏 20.07.12
+    int calculateMinimumHP(std::vector<std::vector<int>> &dungeon);
+
   private:
     long pre;
 };
