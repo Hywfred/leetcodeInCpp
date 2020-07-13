@@ -278,6 +278,9 @@ class Solution {
     // 地下城游戏 20.07.12
     int calculateMinimumHP(std::vector<std::vector<int>> &dungeon);
 
+    // 两个数组的交集II 20.07.13
+    std::vector<int> intersect(std::vector<int> &nums1, std::vector<int> &nums2);
+
   private:
     long pre;
 };
