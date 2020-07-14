@@ -4,9 +4,15 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(calc_hp calc_hp_test.cc)
-target_link_libraries(calc_hp daily weekly "gtest" "gtest_main")
-add_test(NAME calc_hp COMMAND calc_hp)
+
+add_executable(min_total min_total_test.cc)
+target_link_libraries(min_total daily weekly "gtest" "gtest_main")
+add_test(NAME min_total COMMAND min_total)
+
+
+# add_executable(calc_hp calc_hp_test.cc)
+# target_link_libraries(calc_hp daily weekly "gtest" "gtest_main")
+# add_test(NAME calc_hp COMMAND calc_hp)
 
 # add_executable(count_smaller count_smaller_test.cc)
 # target_link_libraries(count_smaller daily weekly "gtest" "gtest_main")

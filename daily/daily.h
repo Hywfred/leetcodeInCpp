@@ -281,6 +281,9 @@ class Solution {
     // 两个数组的交集II 20.07.13
     std::vector<int> intersect(std::vector<int> &nums1, std::vector<int> &nums2);
 
+    // 三角形最小路径和 20.07.14
+    int minimumTotal(std::vector<std::vector<int>> &triangle);
+
   private:
     long pre;
 };
