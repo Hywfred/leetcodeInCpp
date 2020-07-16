@@ -287,6 +287,9 @@ class Solution {
     // 不同的二叉搜索树 20.07.15
     int numTrees(int n);
 
+    // 判断二分图 20.07.16
+    bool isBipartite(std::vector<std::vector<int>> &graph);
+
   private:
     long pre;
 };

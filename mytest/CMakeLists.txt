@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(num_tree num_tree_test.cc)
-target_link_libraries(num_tree daily weekly "gtest" "gtest_main")
-add_test(NAME num_tree COMMAND num_tree)
+add_executable(is_bipartite is_bipartite_test.cc)
+target_link_libraries(is_bipartite daily weekly "gtest" "gtest_main")
+add_test(NAME is_bipartite COMMAND is_bipartite)
+
+# add_executable(num_tree num_tree_test.cc)
+# target_link_libraries(num_tree daily weekly "gtest" "gtest_main")
+# add_test(NAME num_tree COMMAND num_tree)
 
 # add_executable(min_total min_total_test.cc)
 # target_link_libraries(min_total daily weekly "gtest" "gtest_main")
