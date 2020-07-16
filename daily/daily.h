@@ -284,6 +284,9 @@ class Solution {
     // 三角形最小路径和 20.07.14
     int minimumTotal(std::vector<std::vector<int>> &triangle);
 
+    // 不同的二叉搜索树 20.07.15
+    int numTrees(int n);
+
   private:
     long pre;
 };
