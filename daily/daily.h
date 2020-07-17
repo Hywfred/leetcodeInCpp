@@ -290,6 +290,9 @@ class Solution {
     // 判断二分图 20.07.16
     bool isBipartite(std::vector<std::vector<int>> &graph);
 
+    // 搜索插入位置 20.07.17
+    int searchInsert(std::vector<int> &nums, int target);
+
   private:
     long pre;
 };
