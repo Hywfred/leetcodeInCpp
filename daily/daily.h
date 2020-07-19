@@ -293,6 +293,9 @@ class Solution {
     // 搜索插入位置 20.07.17
     int searchInsert(std::vector<int> &nums, int target);
 
+    // 戳气球 20.07.19
+    int maxCoins(std::vector<int> &nums);
+
   private:
     long pre;
 };

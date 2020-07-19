@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(search_insert search_insert_test.cc)
-target_link_libraries(search_insert daily weekly "gtest" "gtest_main")
-add_test(NAME search_insert COMMAND search_insert)
+add_executable(max_coin max_coin_test.cc)
+target_link_libraries(max_coin daily weekly "gtest" "gtest_main")
+add_test(NAME max_coin COMMAND max_coin)
+
+# add_executable(search_insert search_insert_test.cc)
+# target_link_libraries(search_insert daily weekly "gtest" "gtest_main")
+# add_test(NAME search_insert COMMAND search_insert)
 
 # add_executable(is_bipartite is_bipartite_test.cc)
 # target_link_libraries(is_bipartite daily weekly "gtest" "gtest_main")
