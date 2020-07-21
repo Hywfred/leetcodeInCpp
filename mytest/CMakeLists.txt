@@ -12,6 +12,10 @@ add_test(NAME generate_trees COMMAND generate_trees)
 # target_link_libraries(two_sum daily weekly "gtest" "gtest_main")
 # add_test(NAME two_sum COMMAND two_sum)
 
+# add_executable(max_coin max_coin_test.cc)
+# target_link_libraries(max_coin daily weekly "gtest" "gtest_main")
+# add_test(NAME max_coin COMMAND max_coin)
+
 # add_executable(search_insert search_insert_test.cc)
 # target_link_libraries(search_insert daily weekly "gtest" "gtest_main")
 # add_test(NAME search_insert COMMAND search_insert)

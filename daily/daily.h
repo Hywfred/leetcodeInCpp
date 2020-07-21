@@ -293,6 +293,9 @@ class Solution {
     // 搜索插入位置 20.07.17
     int searchInsert(std::vector<int> &nums, int target);
 
+    // 戳气球 20.07.19
+    int maxCoins(std::vector<int> &nums);
+
     // 两数之和II - 输入有序数组 20.07.20
     std::vector<int> twoSum(std::vector<int> &numbers, int target);
 
