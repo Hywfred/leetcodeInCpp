@@ -293,6 +293,12 @@ class Solution {
     // 搜索插入位置 20.07.17
     int searchInsert(std::vector<int> &nums, int target);
 
+    // 两数之和II - 输入有序数组 20.07.20
+    std::vector<int> twoSum(std::vector<int> &numbers, int target);
+
+    // 不同的二叉搜索树 II 20.07.21
+    std::vector<TreeNode *> generateTrees(int n);
+
   private:
     long pre;
 };

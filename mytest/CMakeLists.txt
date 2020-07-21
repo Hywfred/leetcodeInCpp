@@ -4,9 +4,17 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(search_insert search_insert_test.cc)
-target_link_libraries(search_insert daily weekly "gtest" "gtest_main")
-add_test(NAME search_insert COMMAND search_insert)
+add_executable(generate_trees generate_trees_test.cc)
+target_link_libraries(generate_trees daily weekly "gtest" "gtest_main")
+add_test(NAME generate_trees COMMAND generate_trees)
+
+# add_executable(two_sum two_sum_test.cc)
+# target_link_libraries(two_sum daily weekly "gtest" "gtest_main")
+# add_test(NAME two_sum COMMAND two_sum)
+
+# add_executable(search_insert search_insert_test.cc)
+# target_link_libraries(search_insert daily weekly "gtest" "gtest_main")
+# add_test(NAME search_insert COMMAND search_insert)
 
 # add_executable(is_bipartite is_bipartite_test.cc)
 # target_link_libraries(is_bipartite daily weekly "gtest" "gtest_main")
