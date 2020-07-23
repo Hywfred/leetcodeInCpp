@@ -305,6 +305,9 @@ class Solution {
     // 旋转数组的最小数字 20.07.21
     int minArray(std::vector<int> &numbers);
 
+    // 最小路径和 20.07.23
+    int minPathSum(std::vector<std::vector<int>> &grid);
+
   private:
     long pre;
 };

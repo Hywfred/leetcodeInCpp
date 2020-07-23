@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(min_array min_array_test.cc)
-target_link_libraries(min_array daily weekly "gtest" "gtest_main")
-add_test(NAME min_array COMMAND min_array)
+add_executable(min_path_sum min_path_sum_test.cc)
+target_link_libraries(min_path_sum daily weekly "gtest" "gtest_main")
+add_test(NAME min_path_sum COMMAND min_path_sum)
+
+# add_executable(min_array min_array_test.cc)
+# target_link_libraries(min_array daily weekly "gtest" "gtest_main")
+# add_test(NAME min_array COMMAND min_array)
 
 # add_executable(generate_trees generate_trees_test.cc)
 # target_link_libraries(generate_trees daily weekly "gtest" "gtest_main")
