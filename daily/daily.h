@@ -302,6 +302,9 @@ class Solution {
     // 不同的二叉搜索树 II 20.07.21
     std::vector<TreeNode *> generateTrees(int n);
 
+    // 旋转数组的最小数字 20.07.21
+    int minArray(std::vector<int> &numbers);
+
   private:
     long pre;
 };

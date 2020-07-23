@@ -8,11 +8,22 @@ using namespace std;
 int total_air;
 //
 
-int main(int argv, char *args[]) {
-    pair<int, int> p;
-    vector<pair<int, int>> v;
-    cout << p.first << " " << p.second << endl;
+class Fraction {
+  private:
+    int fenZi;
+    int fenMu;
 
+  public:
+    Fraction(int zi, int mu) : fenZi(zi), fenMu(mu) {}
+    //转换函数
+    operator double() const { return double(fenZi) / double(fenMu); }
+};
+
+//测试
+int main() {
+    Fraction f(3, 5);
+    double d = 4 + f;
+    cout << "d = " << d << endl;
     return 0;
 }
 
