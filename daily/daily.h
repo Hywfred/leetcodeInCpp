@@ -308,6 +308,11 @@ class Solution {
     // 最小路径和 20.07.23
     int minPathSum(std::vector<std::vector<int>> &grid);
 
+    // 分割数组的最大值 20.07.25
+    int splitArray(std::vector<int> &nums, int m);
+
+    // 矩阵中的最长递增路径 20.07.26
+
   private:
     long pre;
 };
