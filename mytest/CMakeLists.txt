@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(split_arr split_array_test.cc)
-target_link_libraries(split_arr daily weekly "gtest" "gtest_main")
-add_test(NAME split_arr COMMAND split_arr)
+add_executable(is_subsequence is_subsequence_test.cc)
+target_link_libraries(is_subsequence daily weekly "gtest" "gtest_main")
+add_test(NAME is_subsequence COMMAND is_subsequence)
+
+# add_executable(split_arr split_array_test.cc)
+# target_link_libraries(split_arr daily weekly "gtest" "gtest_main")
+# add_test(NAME split_arr COMMAND split_arr)
 
 # add_executable(min_path_sum min_path_sum_test.cc)
 # target_link_libraries(min_path_sum daily weekly "gtest" "gtest_main")

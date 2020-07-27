@@ -313,6 +313,9 @@ class Solution {
 
     // 矩阵中的最长递增路径 20.07.26
 
+    // 判断子序列 20.07.27
+    bool isSubsequence(std::string s, std::string t);
+
   private:
     long pre;
 };
