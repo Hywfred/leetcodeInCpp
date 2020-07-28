@@ -316,6 +316,9 @@ class Solution {
     // 判断子序列 20.07.27
     bool isSubsequence(std::string s, std::string t);
 
+    // 二叉树的最大深度 20.07.28
+    int maxDepth(TreeNode *root);
+
   private:
     long pre;
 };
