@@ -319,6 +319,9 @@ class Solution {
     // 二叉树的最大深度 20.07.28
     int maxDepth(TreeNode *root);
 
+    // 寻宝 20.07.29
+    int minimalSteps(std::vector<std::string> &maze);
+
   private:
     long pre;
 };
