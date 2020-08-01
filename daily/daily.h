@@ -322,6 +322,12 @@ class Solution {
     // 寻宝 20.07.29
     int minimalSteps(std::vector<std::string> &maze);
 
+    // 正数拆分 20.07.30
+    int integerBreak(int n);
+
+    // 魔术索引 20.07.31
+    int findMagicIndex(std::vector<int> &nums);
+
   private:
     long pre;
 };

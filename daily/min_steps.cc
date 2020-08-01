@@ -38,4 +38,5 @@ int Solution::minimalSteps(vector<string> &maze) {
     /**
      * https://leetcode-cn.com/problems/xun-bao/solution/xun-bao-bfs-dp-by-leetcode-solution/
      */
+    return 0;
 }

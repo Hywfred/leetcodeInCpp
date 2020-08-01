@@ -4,9 +4,17 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(is_subsequence is_subsequence_test.cc)
-target_link_libraries(is_subsequence daily weekly "gtest" "gtest_main")
-add_test(NAME is_subsequence COMMAND is_subsequence)
+add_executable(find_magic_index find_magic_index_test.cc)
+target_link_libraries(find_magic_index daily weekly "gtest" "gtest_main")
+add_test(NAME find_magic_index COMMAND find_magic_index)
+
+# add_executable(int_break int_break_test.cc)
+# target_link_libraries(int_break daily weekly "gtest" "gtest_main")
+# add_test(NAME int_break COMMAND int_break)
+
+# add_executable(is_subsequence is_subsequence_test.cc)
+# target_link_libraries(is_subsequence daily weekly "gtest" "gtest_main")
+# add_test(NAME is_subsequence COMMAND is_subsequence)
 
 # add_executable(split_arr split_array_test.cc)
 # target_link_libraries(split_arr daily weekly "gtest" "gtest_main")
