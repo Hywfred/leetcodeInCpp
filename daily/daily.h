@@ -328,6 +328,9 @@ class Solution {
     // 魔术索引 20.07.31
     int findMagicIndex(std::vector<int> &nums);
 
+    // 二叉树展开为链表 20.08.02
+    void flatten(TreeNode *root);
+
   private:
     long pre;
 };
