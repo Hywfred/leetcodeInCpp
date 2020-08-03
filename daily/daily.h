@@ -331,6 +331,9 @@ class Solution {
     // 二叉树展开为链表 20.08.02
     void flatten(TreeNode *root);
 
+    // 字符串相加 20.08.03
+    std::string addStrings(std::string num1, std::string num2);
+
   private:
     long pre;
 };

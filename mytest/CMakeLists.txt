@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(find_magic_index find_magic_index_test.cc)
-target_link_libraries(find_magic_index daily weekly "gtest" "gtest_main")
-add_test(NAME find_magic_index COMMAND find_magic_index)
+add_executable(add_strings add_strings_test.cc)
+target_link_libraries(add_strings daily weekly "gtest" "gtest_main")
+add_test(NAME add_strings COMMAND add_strings)
+
+# add_executable(find_magic_index find_magic_index_test.cc)
+# target_link_libraries(find_magic_index daily weekly "gtest" "gtest_main")
+# add_test(NAME find_magic_index COMMAND find_magic_index)
 
 # add_executable(int_break int_break_test.cc)
 # target_link_libraries(int_break daily weekly "gtest" "gtest_main")
