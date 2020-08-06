@@ -4,9 +4,13 @@ project(mytest)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-add_executable(add_strings add_strings_test.cc)
-target_link_libraries(add_strings daily weekly "gtest" "gtest_main")
-add_test(NAME add_strings COMMAND add_strings)
+add_executable(is_palindrome_pairs is_palindrome_pairs_test.cc)
+target_link_libraries(is_palindrome_pairs daily weekly "gtest" "gtest_main")
+add_test(NAME is_palindrome_pairs COMMAND is_palindrome_pairs)
+
+# add_executable(add_strings add_strings_test.cc)
+# target_link_libraries(add_strings daily weekly "gtest" "gtest_main")
+# add_test(NAME add_strings COMMAND add_strings)
 
 # add_executable(find_magic_index find_magic_index_test.cc)
 # target_link_libraries(find_magic_index daily weekly "gtest" "gtest_main")

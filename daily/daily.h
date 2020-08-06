@@ -334,6 +334,9 @@ class Solution {
     // 字符串相加 20.08.03
     std::string addStrings(std::string num1, std::string num2);
 
+    // 回文对 20.08.06
+    std::vector<std::vector<int>> palindromePairs(std::vector<std::string> &words);
+
   private:
     long pre;
 };
